@@ -1,0 +1,13 @@
+{
+    "theme": {
+        "colors":{
+            "primary": "#0A0903",
+            "secondary":"#850502",
+            "tertiary":"#FF0000",
+            "quarternary":"#FF4100",
+            "quinary":"#FF8200",
+            "senary":"#FFC100",
+            "septanary":"#FFEAAE"
+        }
+    }
+}

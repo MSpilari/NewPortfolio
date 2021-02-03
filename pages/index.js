@@ -1,65 +1,109 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import styled from 'styled-components'
+
+const HeaderBar = styled.div`
+	position: fixed;
+	height: 100%;
+	width: 60px;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: transparent;
+
+	& > i {
+		color: wheat;
+		margin-right: 20px;
+		font-size: 25px;
+	}
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		height: 60px;
+		flex-direction: row;
+	}
+`
+
+const NavBar = styled.nav`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	& > i {
+		margin: 20px 0;
+		color: white;
+		font-size: 28px;
+	}
+
+	@media screen and (max-width: 482px) {
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		flex-direction: row;
+		& > i {
+			margin: 0 20px;
+		}
+	}
+`
+
+const SocialMediaList = styled.ul`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0;
+
+	list-style: none;
+
+	& > li {
+		color: white;
+		margin: 5px 0;
+		font-size: 20px;
+	}
+
+	@media screen and (max-width: 482px) {
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		flex-direction: row;
+		& > li {
+			margin: 0 5px;
+		}
+	}
+`
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+	return (
+		<header>
+			<HeaderBar>
+				<Link href='/'>
+					<a>
+						<img style={{ width: '100%' }} src='/Logo(1).svg' />
+					</a>
+				</Link>
+				<i class='fas fa-bars'></i>
+				<NavBar>
+					<i class='fas fa-home'></i>
+					<i class='fas fa-user'></i>
+					<i class='fas fa-cog'></i>
+					<i class='far fa-eye'></i>
+					<i class='fas fa-envelope'></i>
+				</NavBar>
+				<SocialMediaList>
+					<li>
+						<i class='fab fa-github'></i>
+					</li>
+					<li>
+						<i class='fab fa-linkedin-in'></i>
+					</li>
+				</SocialMediaList>
+			</HeaderBar>
+		</header>
+	)
 }
