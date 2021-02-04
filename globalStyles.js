@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html, body {
     min-height: 100vh;
-    background-color:${({ theme }) => theme.colors.primary}
+    background-color:${({ theme }) => theme.colors.bg}
   }
   #__next {
     flex: 1;

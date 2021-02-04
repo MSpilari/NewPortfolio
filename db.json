@@ -1,13 +1,11 @@
 {
     "theme": {
         "colors":{
-            "primary": "#0A0903",
-            "secondary":"#850502",
-            "tertiary":"#FF0000",
-            "quarternary":"#FF4100",
-            "quinary":"#FF8200",
-            "senary":"#FFC100",
-            "septanary":"#FFEAAE"
+            "bg": "#444545",
+            "blackBg":"#140800",
+            "hoverButtons":"#F4B701",
+            "crazyBlue":"#4E9BA6",
+            "text":"#FBFBFB"
         }
     }
 }
