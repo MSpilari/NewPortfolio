@@ -15,11 +15,11 @@ const AppBar = () => {
 				</Link>
 				<i class='fas fa-bars'></i>
 				<NavBar>
-					<Icon href='/' className='fas fa-home' />
-					<Icon href='/about' className='fas fa-user' />
-					<Icon href='/skills' className='fas fa-cog' />
-					<Icon href='/portfolio' className='far fa-eye' />
-					<Icon href='/contact' className='fas fa-envelope' />
+					<Icon href='/' className='fas fa-home' text='Home' />
+					<Icon href='/about' className='fas fa-user' text='About' />
+					<Icon href='/skills' className='fas fa-cog' text='Skills' />
+					<Icon href='/portfolio' className='far fa-eye' text='Portfolio' />
+					<Icon href='/contact' className='fas fa-envelope' text='Contact' />
 				</NavBar>
 				<SocialMediaList>
 					<SocialIcon

@@ -1,26 +1,14 @@
-import styled from 'styled-components'
 import Link from 'next/link'
 
-const StyledIcon = styled.i`
-	margin: 20px 0;
-	color: ${({ theme }) => theme.colors.text};
-	font-size: 28px;
+import { StyledAnchor, StyledIcon, StyledIconText } from './styles'
 
-	&:hover {
-		color: ${({ theme }) => theme.colors.hoverButtons};
-	}
-
-	@media screen and (max-width: 768px) {
-		margin: 0 20px;
-	}
-`
-
-const Icon = ({ href, className }) => {
+const Icon = ({ href, className, text }) => {
 	return (
 		<Link href={href}>
-			<a>
+			<StyledAnchor>
 				<StyledIcon className={className} />
-			</a>
+				<StyledIconText>{text}</StyledIconText>
+			</StyledAnchor>
 		</Link>
 	)
 }
