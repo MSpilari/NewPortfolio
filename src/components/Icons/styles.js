@@ -20,23 +20,6 @@ export const StyledIconText = styled.p`
 `
 
 export const StyledAnchor = styled.a`
-	@keyframes fadeIn {
-		from {
-			opacity: 1;
-		}
-		to {
-			opacity: 0;
-		}
-	}
-
-	@keyframes fadeOut {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
 	position: relative;
 	text-decoration: none;
 	align-items: center;
@@ -47,11 +30,13 @@ export const StyledAnchor = styled.a`
 
 	&:hover i {
 		color: ${({ theme }) => theme.colors.hoverButtons};
-		animation: fadeIn 2s linear;
+		opacity: 0;
+		transition: 1s linear;
 	}
 	&:hover p {
 		color: ${({ theme }) => theme.colors.hoverButtons};
-		animation: fadeOut 1s linear 1s;
+		opacity: 1;
+		transition: 1s linear;
 	}
 
 	@media screen and (min-width: 768px) {

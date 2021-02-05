@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
 				<script
 					defer
 					src='https://kit.fontawesome.com/2dc936f8ea.js'
-					crossorigin='anonymous'
+					crossOrigin='anonymous'
 				></script>
 			</Head>
 			<Component {...pageProps} />

@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import Icon from '../Icons'
 import SocialIcon from '../SocialIcons'
 import { HeaderBar, NavBar, SocialMediaList } from '../Header/styles'
@@ -8,11 +6,9 @@ const AppBar = () => {
 	return (
 		<header>
 			<HeaderBar>
-				<Link href='/'>
-					<a style={{ backgroundColor: 'black' }}>
-						<img style={{ width: '100%' }} src='/Logo(1).svg' />
-					</a>
-				</Link>
+				<a style={{ backgroundColor: 'black' }}>
+					<img style={{ width: '100%' }} src='/Logo(1).svg' />
+				</a>
 				<i class='fas fa-bars'></i>
 				<NavBar>
 					<Icon href='/' className='fas fa-home' text='Home' />
