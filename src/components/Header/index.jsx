@@ -1,34 +1,56 @@
 import Icon from '../Icons'
 import SocialIcon from '../SocialIcons'
-import { HeaderBar, NavBar, SocialMediaList } from '../Header/styles'
+import {
+	HeaderBar,
+	NavBar,
+	SocialMediaList,
+	HeaderWrapper
+} from '../Header/styles'
+import {
+	AiOutlineHome,
+	AiOutlineUser,
+	AiOutlineEye,
+	AiOutlineMail,
+	AiFillGithub,
+	AiFillLinkedin
+} from 'react-icons/ai'
+import { BsGear } from 'react-icons/bs'
 
 const AppBar = () => {
 	return (
-		<header>
+		<HeaderWrapper>
 			<HeaderBar>
-				<a style={{ backgroundColor: 'black' }}>
+				<a style={{ backgroundColor: 'black', width: '60px', height: '60px' }}>
 					<img style={{ width: '100%' }} src='/Logo(1).svg' />
 				</a>
 				<i class='fas fa-bars'></i>
 				<NavBar>
-					<Icon href='/' className='fas fa-home' text='Home' />
-					<Icon href='/about' className='fas fa-user' text='About' />
-					<Icon href='/skills' className='fas fa-cog' text='Skills' />
-					<Icon href='/portfolio' className='far fa-eye' text='Portfolio' />
-					<Icon href='/contact' className='fas fa-envelope' text='Contact' />
+					<Icon href='/' text='Home'>
+						<AiOutlineHome />
+					</Icon>
+					<Icon href='/about' text='About'>
+						<AiOutlineUser />
+					</Icon>
+					<Icon href='/skills' text='Skills'>
+						<BsGear />
+					</Icon>
+					<Icon href='/projects' text='Projects'>
+						<AiOutlineEye />
+					</Icon>
+					<Icon href='/contact' text='Contact'>
+						<AiOutlineMail />
+					</Icon>
 				</NavBar>
 				<SocialMediaList>
-					<SocialIcon
-						href='https://github.com/MSpilari'
-						className='fab fa-github'
-					/>
-					<SocialIcon
-						href='https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/'
-						className='fab fa-linkedin-in'
-					/>
+					<SocialIcon href='https://github.com/MSpilari'>
+						<AiFillGithub />
+					</SocialIcon>
+					<SocialIcon href='https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/'>
+						<AiFillLinkedin />
+					</SocialIcon>
 				</SocialMediaList>
 			</HeaderBar>
-		</header>
+		</HeaderWrapper>
 	)
 }
 

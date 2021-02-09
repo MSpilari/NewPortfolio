@@ -14,11 +14,11 @@ const StyledSocialIcon = styled.i`
 	}
 `
 
-const SocialIcon = ({ href, className }) => {
+const SocialIcon = ({ href, children }) => {
 	return (
 		<a href={href} target='_blank' rel='noreferrer'>
 			<li>
-				<StyledSocialIcon className={className} />
+				<StyledSocialIcon>{children}</StyledSocialIcon>
 			</li>
 		</a>
 	)

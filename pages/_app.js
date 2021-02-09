@@ -11,11 +11,12 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				<title>MSpilari | FullStack Developer</title>
 				<link rel='icon' href='/LogoYB.svg' />
-				<script
-					defer
-					src='https://kit.fontawesome.com/2dc936f8ea.js'
-					crossOrigin='anonymous'
-				></script>
+
+				<link rel='preconnect' href='https://fonts.gstatic.com' />
+				<link
+					href='https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap'
+					rel='stylesheet'
+				/>
 			</Head>
 			<Component {...pageProps} />
 		</ThemeProvider>

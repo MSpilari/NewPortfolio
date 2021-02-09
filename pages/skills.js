@@ -1,7 +1,7 @@
 import Header from '../src/components/Header'
 
-const About = () => {
+const Skills = () => {
 	return <Header></Header>
 }
 
-export default About
+export default Skills

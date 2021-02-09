@@ -1,20 +1,15 @@
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import { StyledAnchor, StyledIcon, StyledIconText } from './styles'
 
-const Icon = ({ href, className, text }) => {
-	const router = useRouter()
-
-	const handleClick = event => {
-		event.preventDefault()
-		return router.push(href)
-	}
-
+const Icon = ({ href, text, children }) => {
 	return (
-		<StyledAnchor href={href} onClick={e => handleClick(e)}>
-			<StyledIcon className={className} />
-			<StyledIconText>{text}</StyledIconText>
-		</StyledAnchor>
+		<Link href={href}>
+			<StyledAnchor>
+				<StyledIcon>{children}</StyledIcon>
+				<StyledIconText>{text}</StyledIconText>
+			</StyledAnchor>
+		</Link>
 	)
 }
 

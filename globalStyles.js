@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    font-family:'Hammersmith One', sans-serif;
   }
   html, body {
     min-height: 100vh;
@@ -16,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
     flex: 1;
     display: flex;
     flex-direction: column;
+    width:100vw;
+    height:100vh;
   }
 `
 export default GlobalStyle

@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+export const HeaderWrapper = styled.header`
+	width: 60px;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		height: 60px;
+	}
+`
+
 export const HeaderBar = styled.div`
 	position: fixed;
 	height: 100%;
