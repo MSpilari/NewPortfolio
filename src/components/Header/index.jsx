@@ -34,8 +34,9 @@ const AppBar = () => {
 					<AiOutlineMenu onClick={() => setIsOpen(!isOpen)} />
 				</i>
 			</HeaderBar>
-
-			<MovingNav isOpen={isOpen} />
+			<span>
+				<MovingNav isOpen={isOpen} />
+			</span>
 		</HeaderWrapper>
 	)
 }

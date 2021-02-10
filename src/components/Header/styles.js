@@ -3,6 +3,11 @@ import styled from 'styled-components'
 export const HeaderWrapper = styled.header`
 	width: 60px;
 
+	@media screen and (min-width: 482px) {
+		& > span {
+			display: none;
+		}
+	}
 	@media screen and (max-width: 768px) {
 		width: 100%;
 		height: 60px;
