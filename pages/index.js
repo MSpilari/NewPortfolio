@@ -20,6 +20,12 @@ const TextDiv = styled.div`
 	}
 `
 
+const AnimationDiv = styled.div`
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+`
+
 export default function Home() {
 	const mytext = 'Olá, eu sou o Matheus, Web Developer.'
 
@@ -41,13 +47,13 @@ export default function Home() {
 					<Button label='Entrar em contato !' />
 				</Link>
 			</TextDiv>
-			<div>
+			<AnimationDiv>
 				<Lottie
 					options={defaultOptions}
 					width={'90%'}
 					isClickToPauseDisabled={true}
 				/>
-			</div>
+			</AnimationDiv>
 		</DefaultPage>
 	)
 }
