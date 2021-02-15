@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { IconsDiv, SkillIcon } from './styles'
 
 import {
@@ -36,7 +37,13 @@ const IconsFunc = () => {
 		<IconsDiv>
 			{allLogos.map(Logo => {
 				return (
-					<SkillIcon>
+					<SkillIcon
+						as={motion.i}
+						whileHover={{
+							rotate: [0, 0, 270, 270, 0],
+							borderRadius: ['0%', '20%', '50%', '50%', '0%']
+						}}
+					>
 						<Logo />
 					</SkillIcon>
 				)

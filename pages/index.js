@@ -8,19 +8,25 @@ import CustomCharacters from '../src/components/Titles'
 import animationData from '../src/assets/laptopworking.json'
 
 const TextDiv = styled.div`
-	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 40%;
 
 	& h4 {
 		align-self: flex-end;
 		color: ${({ theme }) => theme.colors.crazyBlue};
 		margin: 0 0 10px 0;
 	}
+
+	@media screen and (max-width: 768px) {
+		width: 95%;
+		margin: 0 auto;
+	}
 `
 
 const AnimationDiv = styled.div`
+	width: 42%;
 	@media screen and (max-width: 768px) {
 		display: none;
 	}
@@ -48,11 +54,7 @@ export default function Home() {
 				</Link>
 			</TextDiv>
 			<AnimationDiv>
-				<Lottie
-					options={defaultOptions}
-					width={'90%'}
-					isClickToPauseDisabled={true}
-				/>
+				<Lottie options={defaultOptions} isClickToPauseDisabled={true} />
 			</AnimationDiv>
 		</DefaultPage>
 	)

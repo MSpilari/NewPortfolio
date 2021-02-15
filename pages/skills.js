@@ -7,6 +7,7 @@ const Info = styled.p`
 	color: ${({ theme }) => theme.colors.text};
 `
 const InfoDiv = styled.div`
+	margin-top: 60px;
 	width: 45%;
 	@media screen and (max-width: 768px) {
 		width: 100%;
