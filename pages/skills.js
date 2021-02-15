@@ -1,31 +1,22 @@
 import styled from 'styled-components'
 import DefaultPage from '../src/components/DefaultPage'
 import PageTitle from '../src/components/Titles'
-
-import {
-	IoLogoHtml5,
-	IoLogoCss3,
-	IoLogoJavascript,
-	IoLogoNodejs,
-	IoLogoPython
-} from 'react-icons/io'
-import {
-	SiTypescript,
-	SiNextDotJs,
-	SiStyledComponents,
-	SiMongodb,
-	SiPostgresql,
-	SiReact
-} from 'react-icons/si'
+import IconsFunc from '../src/components/IconsDiv'
 
 const Info = styled.p`
 	color: ${({ theme }) => theme.colors.text};
+`
+const InfoDiv = styled.div`
+	width: 45%;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 `
 
 const Skills = () => {
 	return (
 		<DefaultPage>
-			<div>
+			<InfoDiv>
 				<PageTitle text={'Habilidades & Experiência'} />
 				<Info>
 					Possuo mais conhecimento com o FrontEnd.
@@ -49,42 +40,8 @@ const Skills = () => {
 					</a>{' '}
 					para entrar em contato.
 				</Info>
-			</div>
-			<div>
-				<i>
-					<IoLogoHtml5 />
-				</i>
-				<i>
-					<IoLogoCss3 />
-				</i>
-				<i>
-					<SiStyledComponents />
-				</i>
-				<i>
-					<IoLogoJavascript />
-				</i>
-				<i>
-					<SiTypescript />
-				</i>
-				<i>
-					<IoLogoPython />
-				</i>
-				<i>
-					<IoLogoNodejs />
-				</i>
-				<i>
-					<SiReact />
-				</i>
-				<i>
-					<SiNextDotJs />
-				</i>
-				<i>
-					<SiPostgresql />
-				</i>
-				<i>
-					<SiMongodb />
-				</i>
-			</div>
+			</InfoDiv>
+			<IconsFunc />
 		</DefaultPage>
 	)
 }

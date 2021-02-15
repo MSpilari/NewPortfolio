@@ -9,6 +9,7 @@ const MainWrapper = styled.main`
 	align-items: center;
 	justify-content: center;
 	align-self: flex-end;
+	flex-wrap: wrap;
 `
 
 const DefaultPage = ({ children }) => {
