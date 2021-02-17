@@ -1,16 +1,29 @@
 import DefaultPage from '../src/components/DefaultPage'
 import CustomTitle from '../src/components/Titles'
-import db from '../db.json'
+import Carousel from '../src/components/Carousel'
 import CardProject from '../src/components/CardProject'
+
+import db from '../db.json'
+import styled from 'styled-components'
+
+const ProjectWrapper = styled.div`
+	width: 90%;
+	margin: 0 auto;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
+`
 
 const Projects = () => {
 	const projects = db.projects
 
 	return (
 		<DefaultPage>
-			<div style={{ width: '100%' }}>
+			<ProjectWrapper>
 				<CustomTitle text='Projetos' />
-				<div>
+
+				<Carousel>
 					{projects.map(project => {
 						return (
 							<CardProject
@@ -20,8 +33,8 @@ const Projects = () => {
 							/>
 						)
 					})}
-				</div>
-			</div>
+				</Carousel>
+			</ProjectWrapper>
 		</DefaultPage>
 	)
 }

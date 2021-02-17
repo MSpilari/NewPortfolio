@@ -10,6 +10,10 @@ const MainWrapper = styled.main`
 	justify-content: center;
 	align-self: flex-end;
 	flex-wrap: wrap;
+
+	@media screen and (max-width: 768px) {
+		align-self: center;
+	}
 `
 
 const DefaultPage = ({ children }) => {
