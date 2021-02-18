@@ -1,25 +1,4 @@
 {
-    "projects":[
-        {   
-            "href":"https://www.google.com.br",
-            "img":"https://images.unsplash.com/photo-1576440956592-dca3975eb93c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
-            "title":"primeiro projeto",
-            "description":"A descrição do projeto por completo"
-        },
-        {   
-            "href":"https://www.google.com.br",
-            "img":"https://images.unsplash.com/photo-1612130679272-4b6a43e93311?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80",
-            "title":"Segundi projeto",
-            "description":"A descrição do projeto por completo"
-        },
-        {   
-            "href":"https://www.google.com.br",
-            "img":"https://images.unsplash.com/photo-1613470790260-582059be2d4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80",
-            "title":"terceiro projeto",
-            "description":"A descrição do projeto por completo"
-        }
-
-    ],
     "theme": {
         "colors":{
             "bg": "#141414",

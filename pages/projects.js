@@ -1,10 +1,10 @@
+import { useState, useEffect } from 'react'
+import styled from 'styled-components'
+
 import DefaultPage from '../src/components/DefaultPage'
 import CustomTitle from '../src/components/Titles'
 import Carousel from '../src/components/Carousel'
 import CardProject from '../src/components/CardProject'
-
-import db from '../db.json'
-import styled from 'styled-components'
 
 const ProjectWrapper = styled.div`
 	width: 90%;
@@ -16,7 +16,13 @@ const ProjectWrapper = styled.div`
 `
 
 const Projects = () => {
-	const projects = db.projects
+	const [allProjects, setAllProjects] = useState([])
+
+	useEffect(() => {
+		fetch('http://localhost:3000/api/projects')
+			.then(res => res.json())
+			.then(data => setAllProjects(data.projects))
+	})
 
 	return (
 		<DefaultPage>
@@ -24,7 +30,7 @@ const Projects = () => {
 				<CustomTitle text='Projetos' />
 
 				<Carousel>
-					{projects.map(project => {
+					{allProjects.map(project => {
 						return (
 							<CardProject
 								key={project.title}

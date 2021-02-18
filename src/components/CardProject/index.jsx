@@ -16,10 +16,14 @@ const CardProjectDiv = styled.div`
 	}
 
 	& span:nth-child(2) {
+		font-size: 25px;
+		margin: 10px 0;
 		color: ${({ theme }) => theme.colors.hoverButtons};
 	}
 	& span:nth-child(3) {
+		font-size: 15px;
 		color: ${({ theme }) => theme.colors.text};
+		text-align: center;
 	}
 `
 
