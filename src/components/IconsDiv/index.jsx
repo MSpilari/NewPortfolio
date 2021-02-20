@@ -35,9 +35,10 @@ const IconsFunc = () => {
 
 	return (
 		<IconsDiv>
-			{allLogos.map(Logo => {
+			{allLogos.map((Logo, index) => {
 				return (
 					<SkillIcon
+						key={index}
 						as={motion.i}
 						whileHover={{
 							rotate: [0, 0, 270, 270, 0],

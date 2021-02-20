@@ -15,14 +15,14 @@ const FontStyled = styled.span`
 `
 
 const CustomCharacters = ({ text }) => {
-	const customizedChars = text.split('').map(char => {
+	const customizedChars = text.split('').map((char, index) => {
 		return char === ',' ? (
 			<>
-				<FontStyled>{char}</FontStyled>
+				<FontStyled key={index}>{char}</FontStyled>
 				<br />
 			</>
 		) : (
-			<FontStyled>{char}</FontStyled>
+			<FontStyled key={index}>{char}</FontStyled>
 		)
 	})
 
