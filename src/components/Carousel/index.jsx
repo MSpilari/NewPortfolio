@@ -4,23 +4,16 @@ import '@brainhubeu/react-carousel/lib/style.css'
 import { desktopSettings, mediumSettings, mobileSettings } from './styles'
 
 const MyCarousel = ({ children }) => {
-	const [currentScreenSize, setCurrentScreenSize] = useState(
-		getWindowDimensions()
-	)
+	const [currentScreenSize, setCurrentScreenSize] = useState('')
 
 	useEffect(() => {
-		function handleResize() {
-			setCurrentScreenSize(getWindowDimensions())
-		}
-		window.addEventListener('resize', handleResize)
-		return () => window.removeEventListener('resize', handleResize)
+		return setCurrentScreenSize(getWindowDimensions())
 	}, [])
 
 	function getWindowDimensions() {
 		const windowWidth = window.innerWidth
 		return windowWidth
 	}
-
 	function screenSizeCalc() {
 		if (currentScreenSize < 768) return mobileSettings
 		if (768 <= currentScreenSize < 1024) return mediumSettings
