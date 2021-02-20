@@ -19,10 +19,14 @@ const Projects = () => {
 	const [allProjects, setAllProjects] = useState([])
 
 	useEffect(() => {
-		fetch('http://localhost:3000/api/projects')
+		const path =
+			document.location.host === 'localhost:3000'
+				? 'http://localhost:3000/api/projects'
+				: 'https://mspilariportfolio.vercel.app/api/projects'
+		fetch(path)
 			.then(res => res.json())
 			.then(data => setAllProjects(data.projects))
-	})
+	}, [])
 
 	return (
 		<DefaultPage>
