@@ -1,21 +1,27 @@
 export const desktopSettings = {
-	arrows: true,
 	infinite: true,
 	centered: true,
 	slidesPerPage: 3,
-	itemWidth: 350
+	itemWidth: 350,
+	autoPlay: 2000,
+	animationSpeed: 1000,
+	stopAutoPlayOnHover: true
 }
 
 export const mobileSettings = {
-	arrows: true,
 	infinite: true,
 	centered: true,
-	slidesPerPage: 1
+	slidesPerPage: 1,
+	autoPlay: 2000,
+	animationSpeed: 1000,
+	stopAutoPlayOnHover: true
 }
 
 export const mediumSettings = {
-	arrows: true,
 	infinite: true,
 	centered: true,
-	slidesPerPage: 2
+	slidesPerPage: 2,
+	autoPlay: 2000,
+	animationSpeed: 1000,
+	stopAutoPlayOnHover: true
 }

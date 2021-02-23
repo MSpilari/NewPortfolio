@@ -3,6 +3,11 @@ import styled from 'styled-components'
 const CardProjectDiv = styled.div`
 	width: 300px;
 
+	&:hover {
+		border: solid 2px ${({ theme }) => theme.colors.hoverButtons};
+		border-radius: 8px;
+	}
+
 	& a {
 		display: flex;
 		flex-direction: column;
@@ -13,6 +18,7 @@ const CardProjectDiv = styled.div`
 
 	& img {
 		width: 100%;
+		border-radius: 8px 8px 0 0;
 	}
 
 	& span:nth-child(2) {
