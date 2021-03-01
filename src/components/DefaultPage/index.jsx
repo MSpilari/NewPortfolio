@@ -43,7 +43,9 @@ const SecondChildWrapper = styled.div`
 
 	@media screen and (max-width: 768px) {
 		display: ${() =>
-			document.location.pathname === '/skills' ? 'flex' : 'none'};
+			typeof window !== 'undefined' && document.location.pathname === '/skills'
+				? 'flex'
+				: 'none'};
 	}
 `
 
