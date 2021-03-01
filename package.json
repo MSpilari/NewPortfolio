@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest -i"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
@@ -16,5 +17,9 @@
     "react-icons": "^4.2.0",
     "react-lottie": "^1.2.3",
     "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3"
   }
 }
