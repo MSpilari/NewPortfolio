@@ -18,7 +18,7 @@ export const SkillIcon = styled.i`
 
 export const IconsDiv = styled.div`
 	display: grid;
-	width: 50%;
+	width: 90%;
 	gap: 5px;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	margin-left: 5px;
