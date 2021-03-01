@@ -19,7 +19,10 @@ const MainWrapper = styled.main`
 `
 
 const FirstChildWrapper = styled.div`
-	width: ${() => (document.location.pathname === '/projects' ? '100%' : '50%')};
+	width: ${() =>
+		typeof window !== 'undefined' && document.location.pathname === '/projects'
+			? '100%'
+			: '50%'};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -32,7 +35,9 @@ const FirstChildWrapper = styled.div`
 const SecondChildWrapper = styled.div`
 	width: 50%;
 	display: ${() =>
-		document.location.pathname === '/projects' ? 'none' : 'flex'};
+		typeof window !== 'undefined' && document.location.pathname === '/projects'
+			? 'none'
+			: 'flex'};
 	align-items: center;
 	justify-content: center;
 
