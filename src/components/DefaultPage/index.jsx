@@ -19,7 +19,7 @@ const MainWrapper = styled.main`
 `
 
 const FirstChildWrapper = styled.div`
-	width: 50%;
+	width: ${() => (document.location.pathname === '/projects' ? '100%' : '50%')};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -31,12 +31,14 @@ const FirstChildWrapper = styled.div`
 `
 const SecondChildWrapper = styled.div`
 	width: 50%;
-	display: flex;
+	display: ${() =>
+		document.location.pathname === '/projects' ? 'none' : 'flex'};
 	align-items: center;
 	justify-content: center;
 
 	@media screen and (max-width: 768px) {
-		display: none;
+		display: ${() =>
+			document.location.pathname === '/skills' ? 'flex' : 'none'};
 	}
 `
 
