@@ -54,13 +54,15 @@ const isClientSide = () => typeof window !== 'undefined'
 const DefaultPage = ({ firstChild, secondChild }) => {
 	return (
 		<>
-			<NavBar />
-			<MainWrapper>
-				{isClientSide() && <FirstChildWrapper>{firstChild}</FirstChildWrapper>}
-				{isClientSide() && (
-					<SecondChildWrapper>{secondChild}</SecondChildWrapper>
-				)}
-			</MainWrapper>
+			{isClientSide() && (
+				<>
+					<NavBar />
+					<MainWrapper>
+						<FirstChildWrapper>{firstChild}</FirstChildWrapper>
+						<SecondChildWrapper>{secondChild}</SecondChildWrapper>
+					</MainWrapper>
+				</>
+			)}
 		</>
 	)
 }
