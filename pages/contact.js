@@ -1,7 +1,8 @@
-import Header from '../src/components/Header'
+import DefaultPage from '../src/components/DefaultPage'
+import { ContactForm } from '../src/components/pages/Contact'
 
-const Contact = () => {
-	return <Header></Header>
+const About = () => {
+	return <DefaultPage firstChild={<ContactForm />} secondChild />
 }
 
-export default Contact
+export default About
