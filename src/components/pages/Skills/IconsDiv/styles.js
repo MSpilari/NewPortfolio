@@ -1,5 +1,18 @@
 import styled from 'styled-components'
 
+export const IconsDiv = styled.div`
+	display: grid;
+	width: 90%;
+	gap: 5px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-left: 5px;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		margin: 0;
+	}
+`
+
 export const SkillIcon = styled.i`
 	font-size: 50px;
 	display: flex;
@@ -13,18 +26,5 @@ export const SkillIcon = styled.i`
 	&:hover {
 		border: 1px solid ${({ theme }) => theme.colors.hoverButtons};
 		color: ${({ theme }) => theme.colors.hoverButtons};
-	}
-`
-
-export const IconsDiv = styled.div`
-	display: grid;
-	width: 90%;
-	gap: 5px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	margin-left: 5px;
-
-	@media screen and (max-width: 768px) {
-		width: 100%;
-		margin: 0;
 	}
 `

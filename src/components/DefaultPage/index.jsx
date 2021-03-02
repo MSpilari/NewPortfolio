@@ -46,16 +46,20 @@ const SecondChildWrapper = styled.div`
 			typeof window !== 'undefined' && document.location.pathname === '/skills'
 				? 'flex'
 				: 'none'};
+		width: 95%;
 	}
 `
+const isClientSide = () => typeof window !== 'undefined'
 
 const DefaultPage = ({ firstChild, secondChild }) => {
 	return (
 		<>
 			<NavBar />
 			<MainWrapper>
-				<FirstChildWrapper>{firstChild}</FirstChildWrapper>
-				<SecondChildWrapper>{secondChild}</SecondChildWrapper>
+				{isClientSide() && <FirstChildWrapper>{firstChild}</FirstChildWrapper>}
+				{isClientSide() && (
+					<SecondChildWrapper>{secondChild}</SecondChildWrapper>
+				)}
 			</MainWrapper>
 		</>
 	)

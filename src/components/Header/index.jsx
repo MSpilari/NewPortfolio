@@ -3,13 +3,16 @@ import { useState } from 'react'
 import SocialIcon from './SocialIcons'
 import AllIcons from './AllIcons'
 import MovingNav from './MovingNav'
+import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai'
+
 import {
 	HeaderBar,
+	MovingNavWrapper,
 	NavBar,
 	SocialMediaList,
-	HeaderWrapper
+	HeaderWrapper,
+	MenuIconButton
 } from '../Header/styles'
-import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai'
 
 const AppBar = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -30,13 +33,13 @@ const AppBar = () => {
 						<AiFillLinkedin />
 					</SocialIcon>
 				</SocialMediaList>
-				<i>
+				<MenuIconButton>
 					<AiOutlineMenu onClick={() => setIsOpen(!isOpen)} />
-				</i>
+				</MenuIconButton>
 			</HeaderBar>
-			<span>
+			<MovingNavWrapper>
 				<MovingNav isOpen={isOpen} />
-			</span>
+			</MovingNavWrapper>
 		</HeaderWrapper>
 	)
 }
