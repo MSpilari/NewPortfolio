@@ -1,5 +1,7 @@
 import Button from '../../Button'
 import DefaultTitle from '../../Titles'
+import DefaultAnimation from '../../Animation'
+import AnimationJson from '../../../assets/hellohand.json'
 import { DefaultInput, DefaultTextArea, FormContactWrapper } from './styles'
 
 const ContactForm = () => {
@@ -17,4 +19,8 @@ const ContactForm = () => {
 	)
 }
 
-export { ContactForm }
+const Animation = () => {
+	return <DefaultAnimation animationJson={AnimationJson} />
+}
+
+export { ContactForm, Animation }
