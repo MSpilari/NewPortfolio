@@ -1,8 +1,9 @@
-describe('Example', () => {
-	it('Should be able to sum two numbers', () => {
-		const numberOne = 1
-		const numberTwo = 2
+import React from 'react'
+import DefaultPage from '../components/DefaultPage'
+import { shallow } from 'enzyme'
 
-		expect(numberOne + numberTwo).toBe(3)
-	})
+describe('Testing if enzyme is working', () => {
+	const component = shallow(<DefaultPage />)
+
+	expect(component.find('div')).toHaveLength(2)
 })
