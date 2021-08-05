@@ -1,12 +1,18 @@
+import { useContext } from 'react'
 import CustomTitle from '../../Titles'
 import { InfoDiv, Info } from './styles'
+import { GrLinkedin } from 'react-icons/gr'
+import { LanguageContext } from '../../../providers/language'
 
 const SkillsText = () => {
+	const { Lang } = useContext(LanguageContext)
+
 	return (
 		<InfoDiv>
-			<CustomTitle text={'Habilidades & Experiência'} />
+			<CustomTitle text={Lang.SkillsTitle} />
 			<Info>
-				Possuo mais conhecimento com o FrontEnd.
+				{Lang.SkillsInfo}
+				{/* Possuo mais conhecimento com o FrontEnd.
 				<br />
 				<br />
 				HTML, CSS, SASS, Styled Components, Javascript, Typescript, Node, Next,
@@ -22,10 +28,13 @@ const SkillsText = () => {
 				<br />
 				<br />
 				Visite meu{' '}
-				<a href='https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/'>
-					Linkedin
+				<a
+					style={{ textDecoration: 'none', color: 'inherit' }}
+					href='https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/'
+				>
+					<GrLinkedin />
 				</a>{' '}
-				para entrar em contato.
+				para entrar em contato. */}
 			</Info>
 		</InfoDiv>
 	)

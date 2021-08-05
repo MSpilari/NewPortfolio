@@ -7,6 +7,7 @@ const InfoDiv = styled.div`
 `
 const Info = styled.p`
 	color: ${({ theme }) => theme.colors.text};
+	white-space: pre-line;
 `
 
 export { InfoDiv, Info }
