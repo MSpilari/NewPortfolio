@@ -11,6 +11,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
     "framer-motion": "^3.3.0",
+    "html-react-parser": "^1.2.7",
     "next": "10.0.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
