@@ -5,6 +5,7 @@ const defaultLanguage = {
 		ptBr: {
 			HomeTitle: 'Olá, eu sou o Matheus, Web Developer.',
 			ButtonLabel: 'Entrar em contato !',
+			ButtonMessageLabel: 'Enviar Mensagem !',
 			AboutTitle: 'Sobre Mim',
 			AboutInfo: `Amante da tecnologia, sempre buscando conhecer o que está em alta no
             mercado e o mais usadas pelas grandes empresas do ramo.
@@ -37,6 +38,7 @@ const defaultLanguage = {
 		en: {
 			HomeTitle: 'Hello, I´m Matheus, Web Developer.',
 			ButtonLabel: 'Contact Me !',
+			ButtonMessageLabel: 'Send a Message !',
 			AboutTitle: 'About Me',
 			AboutInfo: `Technology lover, always seeking to know what is hot on the 
             market and the most used by large companies in the field.

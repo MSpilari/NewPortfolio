@@ -1,11 +1,14 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Button from '../../Button'
 import DefaultTitle from '../../Titles'
 import DefaultAnimation from '../../Animation'
 import AnimationJson from '../../../assets/hellohand.json'
 import { DefaultInput, DefaultTextArea, FormContactWrapper } from './styles'
+import { LanguageContext } from '../../../providers/language'
 
 const ContactForm = () => {
+	const { Lang } = useContext(LanguageContext)
+
 	const [infoObject, setInfoObject] = useState({
 		name: '',
 		email: '',
@@ -25,7 +28,7 @@ const ContactForm = () => {
 
 	return (
 		<FormContactWrapper onSubmit={e => formSubmited(e)}>
-			<DefaultTitle text='Me contate !' />
+			<DefaultTitle text={Lang.ContactTitle} />
 			<DefaultInput
 				type='text'
 				name='name'
@@ -46,7 +49,7 @@ const ContactForm = () => {
 				placeholder='Sua mensagem...'
 				onChange={e => userWrite(e)}
 			></DefaultTextArea>
-			<Button label='Enviar Mensagem !' />
+			<Button label={Lang.ButtonMessageLabel} />
 		</FormContactWrapper>
 	)
 }
