@@ -29,6 +29,7 @@ export const HeaderBar = styled.div`
 	background-color: rgba(0, 0, 0, 0.3);
 
 	@media screen and (max-width: 768px) {
+		position: absolute;
 		width: 100%;
 		height: 60px;
 		flex-direction: row;
