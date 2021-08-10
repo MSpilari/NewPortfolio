@@ -14,6 +14,7 @@ const AboutWrapper = styled.div`
 
 const Info = styled.p`
 	color: ${({ theme }) => theme.colors.text};
+	white-space: pre-line;
 `
 
 export { AboutWrapper, Info }

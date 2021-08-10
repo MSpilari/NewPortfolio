@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 import SocialIcon from './SocialIcons'
 import AllIcons from './AllIcons'
 import MovingNav from './MovingNav'
 import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai'
+import { GiBrazilFlag, GiUsaFlag } from 'react-icons/gi'
 
 import {
 	HeaderBar,
@@ -14,8 +15,18 @@ import {
 	MenuIconButton
 } from '../Header/styles'
 
+import { LangSwitcher } from './LangSwitcher/styles'
+import { defaultLanguage, LanguageContext } from '../../providers/language'
+
 const AppBar = () => {
+	const { Lang, setLang } = useContext(LanguageContext)
 	const [isOpen, setIsOpen] = useState(false)
+
+	const handleLanguage = () => {
+		return Lang === defaultLanguage.currentLang.ptBr
+			? setLang(defaultLanguage.currentLang.en)
+			: setLang(defaultLanguage.currentLang.ptBr)
+	}
 	return (
 		<HeaderWrapper>
 			<HeaderBar>
@@ -26,6 +37,13 @@ const AppBar = () => {
 					<AllIcons />
 				</NavBar>
 				<SocialMediaList>
+					<LangSwitcher onClick={() => handleLanguage()}>
+						{Lang === defaultLanguage.currentLang.ptBr ? (
+							<GiUsaFlag />
+						) : (
+							<GiBrazilFlag />
+						)}
+					</LangSwitcher>
 					<SocialIcon href='https://github.com/MSpilari'>
 						<AiFillGithub />
 					</SocialIcon>

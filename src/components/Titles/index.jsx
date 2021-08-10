@@ -5,12 +5,12 @@ const FontStyled = styled.span`
 	font-weight: 900;
 	color: ${({ theme }) => theme.colors.text};
 	padding: 1px;
+	cursor: pointer;
 
 	transition: all 0.5s linear;
 
 	&:hover {
 		color: ${({ theme }) => theme.colors.hoverButtons};
-		font-size: 52px;
 	}
 `
 
