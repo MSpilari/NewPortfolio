@@ -1,6 +1,3 @@
-import { motion } from 'framer-motion'
-import { IconsDiv, SkillIcon } from './styles'
-
 import {
 	IoLogoHtml5,
 	IoLogoCss3,
@@ -18,35 +15,47 @@ import {
 	SiReact
 } from 'react-icons/si'
 
+import {
+	IconsDiv,
+	SkillIcon,
+	CardBack,
+	CardFliper,
+	CardFront,
+	CardInner,
+	SpanIcon
+} from './styles'
+
 const IconsFunc = () => {
 	const allLogos = [
-		IoLogoHtml5,
-		IoLogoCss3,
-		SiStyledComponents,
-		IoLogoJavascript,
-		SiTypescript,
-		IoLogoPython,
-		IoLogoNodejs,
-		SiReact,
-		SiNextDotJs,
-		SiPostgresql,
-		SiMongodb
+		{ icon: IoLogoHtml5, label: 'HTML' },
+		{ icon: IoLogoCss3, label: 'CSS' },
+		{ icon: SiStyledComponents, label: 'Styled-Components' },
+		{ icon: IoLogoJavascript, label: 'Javascript' },
+		{ icon: SiTypescript, label: 'Typescript' },
+		{ icon: IoLogoPython, label: 'Python' },
+		{ icon: IoLogoNodejs, label: 'NodeJs' },
+		{ icon: SiReact, label: 'ReactJs' },
+		{ icon: SiNextDotJs, label: 'NextJs' },
+		{ icon: SiPostgresql, label: 'Postgresql' },
+		{ icon: SiMongodb, label: 'MongoDb' }
 	]
 
 	return (
 		<IconsDiv>
 			{allLogos.map((Logo, index) => {
 				return (
-					<SkillIcon
-						key={index}
-						as={motion.i}
-						whileHover={{
-							rotate: [0, 0, 270, 270, 0],
-							borderRadius: ['0%', '20%', '50%', '50%', '0%']
-						}}
-					>
-						<Logo />
-					</SkillIcon>
+					<CardFliper key={index}>
+						<CardInner>
+							<CardFront>
+								<SkillIcon>
+									<Logo.icon />
+								</SkillIcon>
+							</CardFront>
+							<CardBack>
+								<SpanIcon>{Logo.label}</SpanIcon>
+							</CardBack>
+						</CardInner>
+					</CardFliper>
 				)
 			})}
 		</IconsDiv>
