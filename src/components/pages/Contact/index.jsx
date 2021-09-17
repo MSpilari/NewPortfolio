@@ -15,7 +15,6 @@ const ContactForm = () => {
 		message: ''
 	})
 	const formSubmited = event => {
-		console.log(infoObject)
 		return event.preventDefault()
 	}
 	const userWrite = event => {
