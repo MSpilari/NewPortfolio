@@ -1,7 +1,6 @@
 import NavBar from '../Header'
+import { isClientSide } from '../../utils/isClientSide'
 import { MainWrapper, FirstChildWrapper, SecondChildWrapper } from './styles'
-
-const isClientSide = () => typeof window !== 'undefined'
 
 const DefaultPage = ({ firstChild, secondChild }) => {
 	return (
