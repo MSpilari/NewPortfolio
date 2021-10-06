@@ -1,6 +1,6 @@
-import DefaultPage from '../src/components/DefaultPage'
-import { SkillsText } from '../src/components/pages/Skills'
-import IconsFunc from '../src/components/pages/Skills/IconsDiv'
+import DefaultPage from '../src/components/containers/DefaultPage'
+import { SkillsText } from '../src/screens/Skills'
+import IconsFunc from '../src/screens/Skills/IconsDiv'
 
 const Skills = () => {
 	return <DefaultPage firstChild={<SkillsText />} secondChild={<IconsFunc />} />

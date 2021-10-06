@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 
-import { LanguageContext } from '../../../providers/language'
-import DefaultAnimation from '../../Animation'
-import animationJson from '../../../assets/laptopworking.json'
-import Button from '../../Button'
-import CustomCharacters from '../../Titles'
+import { LanguageContext } from '../../providers/language'
+import DefaultAnimation from '../../components/UI/Animation'
+import animationJson from '../../assets/laptopworking.json'
+import Button from '../../components/UI/Button'
+import CustomCharacters from '../../components/UI/Titles'
 import { Role, TextDiv } from './styles'
 
 const Welcome = () => {

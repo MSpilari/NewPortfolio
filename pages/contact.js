@@ -1,10 +1,10 @@
-import DefaultPage from '../src/components/DefaultPage'
-import { ContactForm, Animation } from '../src/components/pages/Contact'
+import DefaultPage from '../src/components/containers/DefaultPage'
+import { ContactForm, Animation } from '../src/screens/Contact'
 
-const About = () => {
+const Contact = () => {
 	return (
 		<DefaultPage firstChild={<ContactForm />} secondChild={<Animation />} />
 	)
 }
 
-export default About
+export default Contact

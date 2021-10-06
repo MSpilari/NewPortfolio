@@ -16,7 +16,7 @@ import {
 } from '../Header/styles'
 
 import { LangSwitcher } from './LangSwitcher/styles'
-import { defaultLanguage, LanguageContext } from '../../providers/language'
+import { defaultLanguage, LanguageContext } from '../../../providers/language'
 
 const AppBar = () => {
 	const { Lang, setLang } = useContext(LanguageContext)

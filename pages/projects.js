@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import DefaultPage from '../src/components/DefaultPage'
-import { OnlyChild } from '../src/components/pages/Projects'
+import DefaultPage from '../src/components/containers/DefaultPage'
+import { OnlyChild } from '../src/screens/Projects'
 
 const Projects = () => {
 	const [allProjects, setAllProjects] = useState([])
