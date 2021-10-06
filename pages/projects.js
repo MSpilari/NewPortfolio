@@ -9,7 +9,7 @@ const Projects = () => {
 
 	useEffect(() => {
 		const path =
-			document.location.host === 'localhost:3000'
+			process.env.NODE_ENV === 'development'
 				? 'http://localhost:3000/api/projects'
 				: 'https://mspilariportfolio.vercel.app/api/projects'
 		fetch(path)
