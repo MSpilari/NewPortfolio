@@ -1,5 +1,5 @@
-import NavBar from '../Header'
-import { isClientSide } from '../../utils/isClientSide'
+import NavBar from '../../UI/Header'
+import { isClientSide } from '../../../utils/isClientSide'
 import { MainWrapper, FirstChildWrapper, SecondChildWrapper } from './styles'
 
 const DefaultPage = ({ firstChild, secondChild }) => {

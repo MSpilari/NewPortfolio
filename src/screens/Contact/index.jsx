@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react'
-import Button from '../../Button'
-import DefaultTitle from '../../Titles'
-import DefaultAnimation from '../../Animation'
-import AnimationJson from '../../../assets/hellohand.json'
+import Button from '../../components/UI/Button'
+import DefaultTitle from '../../components/UI/Titles'
+import DefaultAnimation from '../../components/UI/Animation'
+import AnimationJson from '../../assets/hellohand.json'
 import { DefaultInput, DefaultTextArea, FormContactWrapper } from './styles'
-import { LanguageContext } from '../../../providers/language'
+import { LanguageContext } from '../../providers/language'
 
 const ContactForm = () => {
 	const { Lang } = useContext(LanguageContext)

@@ -2,8 +2,8 @@ import { useContext } from 'react'
 import parse from 'html-react-parser'
 import { GrLinkedin } from 'react-icons/gr'
 
-import { LanguageContext } from '../../../providers/language'
-import CustomTitle from '../../Titles'
+import { LanguageContext } from '../../providers/language'
+import CustomTitle from '../../components/UI/Titles'
 import { InfoDiv, Info } from './styles'
 
 const SkillsText = () => {

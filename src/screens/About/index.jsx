@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 
-import CustomTitle from '../../Titles'
-import DefaultAnimation from '../../Animation'
+import CustomTitle from '../../components/UI/Titles'
+import DefaultAnimation from '../../components/UI/Animation'
 import { AboutWrapper, Info } from './styles'
-import AnimationJson from '../../../assets/about.json'
-import { LanguageContext } from '../../../providers/language'
+import AnimationJson from '../../assets/about.json'
+import { LanguageContext } from '../../providers/language'
 
 const AboutText = () => {
 	const { Lang } = useContext(LanguageContext)
