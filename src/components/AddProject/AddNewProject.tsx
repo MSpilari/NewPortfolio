@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SubmitAProject } from '../../../utils/SubmitAProject'
+import { SubmitAProject } from '../../utils/SubmitAProject'
 import { ImageInput } from './ImageInput'
 import { TitleGitProjectInput } from './TitleGitProjectInput'
 

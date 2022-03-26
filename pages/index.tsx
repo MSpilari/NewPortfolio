@@ -1,7 +1,7 @@
 import { Header } from '../src/components/UI/Header'
-import { AnimationDesktop } from '../src/components/UI/Home/AnimationDesktop'
-import { AnimationMobile } from '../src/components/UI/Home/AnimationMobile'
-import { Greet } from '../src/components/UI/Home/Greet'
+import { AnimationDesktop } from '../src/components/Home/AnimationDesktop'
+import { AnimationMobile } from '../src/components/Home/AnimationMobile'
+import { Greet } from '../src/components/Home/Greet'
 
 const HomePage = () => {
 	return (

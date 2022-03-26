@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie-player'
-import animationMobile from '../../../assets/animationMobile.json'
+import animationMobile from '../../assets/animationMobile.json'
 
 const AnimationMobile = () => {
 	return (

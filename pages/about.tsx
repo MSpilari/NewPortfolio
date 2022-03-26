@@ -1,6 +1,6 @@
-import { AboutAnimationDesktop } from '../src/components/UI/About/AboutAnimationDesktop'
-import { AboutAnimationMobile } from '../src/components/UI/About/AboutAnimationMobile'
-import { AboutText } from '../src/components/UI/About/AboutText'
+import { AboutAnimationDesktop } from '../src/components/About/AboutAnimationDesktop'
+import { AboutAnimationMobile } from '../src/components/About/AboutAnimationMobile'
+import { AboutText } from '../src/components/About/AboutText'
 import { Header } from '../src/components/UI/Header'
 
 const About = () => {

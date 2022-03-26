@@ -1,17 +1,17 @@
 import Lottie from 'react-lottie-player'
-import LoginAnimationDesktop from '../../../assets/animationLoginDesktop.json'
+import AboutAnimationLarge from '../../assets/AboutAnimation.json'
 
-const AnimationLoginDesktop = () => {
+const AboutAnimationDesktop = () => {
 	return (
 		<div className=' hidden w-full h-full overflow-hidden absolute lg:flex'>
 			<Lottie
 				loop
 				play
 				className='w-full'
-				animationData={LoginAnimationDesktop}
+				animationData={AboutAnimationLarge}
 			/>
 		</div>
 	)
 }
 
-export { AnimationLoginDesktop }
+export { AboutAnimationDesktop }

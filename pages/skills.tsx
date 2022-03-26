@@ -1,6 +1,6 @@
 import { Header } from '../src/components/UI/Header'
-import { SkillsAnimationDesktop } from '../src/components/UI/Skills/SkillsAnimationDesktop'
-import { SkillsText } from '../src/components/UI/Skills/SkillsText'
+import { SkillsAnimationDesktop } from '../src/components/Skills/SkillsAnimationDesktop'
+import { SkillsText } from '../src/components/Skills/SkillsText'
 
 const Skills = () => {
 	return (

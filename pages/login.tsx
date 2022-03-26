@@ -1,6 +1,6 @@
 import { Header } from '../src/components/UI/Header'
-import { AnimationLoginDesktop } from '../src/components/UI/Login/AnimationLoginDesktop'
-import { LoginForm } from '../src/components/UI/Login/LoginForm'
+import { AnimationLoginDesktop } from '../src/components/Login/AnimationLoginDesktop'
+import { LoginForm } from '../src/components/Login/LoginForm'
 
 const Login = () => {
 	return (
