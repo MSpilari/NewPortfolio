@@ -1,29 +1,16 @@
-import {
-	collection,
-	onSnapshot,
-	query,
-	QueryDocumentSnapshot
-} from 'firebase/firestore'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import {
 	BsFillArrowLeftSquareFill,
 	BsFillArrowRightSquareFill
 } from 'react-icons/bs'
-import { db } from '../../../firebase'
 import { useLanguage } from '../../hooks/languageHook'
 import { carouselScroll } from '../../utils/carouselScroll'
 import { Project } from './Project'
 
-const ProjectCarousel = () => {
+const ProjectCarousel = ({ projectsInfo }) => {
 	const { language } = useLanguage()
-	const [projects, setProjects] = useState<QueryDocumentSnapshot[]>([])
 	const carouselWrapper = useRef<HTMLDivElement | null>(null)
 
-	useEffect(() => {
-		onSnapshot(query(collection(db, 'projects')), snapshot =>
-			setProjects(snapshot.docs)
-		)
-	}, [])
 	return (
 		<div
 			className='w-full h-full mx-auto absolute z-10 text-white 
@@ -48,14 +35,14 @@ const ProjectCarousel = () => {
 				</button>
 
 				<div className='flex absolute overflow-x-auto'>
-					{projects.map(project => {
+					{projectsInfo.map(project => {
 						return (
 							<Project
 								key={project.id}
-								image={project.data().projectImage}
-								title={project.data().title}
-								prjLink={project.data().projectLink}
-								gitLink={project.data().githubLink}
+								image={project.projectImage}
+								title={project.title}
+								prjLink={project.projectLink}
+								gitLink={project.githubLink}
 							/>
 						)
 					})}
