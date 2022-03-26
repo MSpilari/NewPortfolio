@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie-player'
-import projectDesktopAnimation from '../../../assets/projectAnimationDesktop.json'
+import projectDesktopAnimation from '../../assets/projectAnimationDesktop.json'
 
 const ProjectAnimationDesktop = () => {
 	return (

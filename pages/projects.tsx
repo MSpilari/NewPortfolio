@@ -1,6 +1,6 @@
 import { Header } from '../src/components/UI/Header'
-import { ProjectAnimationDesktop } from '../src/components/UI/Projects/projectAnimationDesktop'
-import { ProjectCarousel } from '../src/components/UI/Projects/ProjectCarousel'
+import { ProjectAnimationDesktop } from '../src/components/Projects/projectAnimationDesktop'
+import { ProjectCarousel } from '../src/components/Projects/ProjectCarousel'
 
 const Projects = () => {
 	return (

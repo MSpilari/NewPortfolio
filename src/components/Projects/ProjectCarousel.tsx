@@ -9,9 +9,9 @@ import {
 	BsFillArrowLeftSquareFill,
 	BsFillArrowRightSquareFill
 } from 'react-icons/bs'
-import { db } from '../../../../firebase'
-import { useLanguage } from '../../../hooks/languageHook'
-import { carouselScroll } from '../../../utils/carouselScroll'
+import { db } from '../../../firebase'
+import { useLanguage } from '../../hooks/languageHook'
+import { carouselScroll } from '../../utils/carouselScroll'
 import { Project } from './Project'
 
 const ProjectCarousel = () => {

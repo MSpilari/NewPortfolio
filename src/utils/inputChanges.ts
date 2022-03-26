@@ -1,6 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { IAllInfo } from '../components/UI/AddProject/AddNewProject'
-
+import { IAllInfo } from '../components/AddProject/AddNewProject'
 
 const inputChanges = (
 	event: ChangeEvent<HTMLInputElement>,

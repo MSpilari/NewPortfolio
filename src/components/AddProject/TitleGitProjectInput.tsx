@@ -1,5 +1,5 @@
 import { Dispatch, FC, SetStateAction } from 'react'
-import { inputChanges } from '../../../utils/inputChanges'
+import { inputChanges } from '../../utils/inputChanges'
 import { IAllInfo } from './AddNewProject'
 
 interface ITitleGitProjectInput {

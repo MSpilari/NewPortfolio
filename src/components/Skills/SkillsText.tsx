@@ -1,7 +1,7 @@
-import { useLanguage } from '../../../hooks/languageHook'
+import { useLanguage } from '../../hooks/languageHook'
 import { AiOutlineHtml5 } from 'react-icons/ai'
 import { Card } from './Card'
-import { allLogos } from '../../../config/allSkillsLogos'
+import { allLogos } from '../../config/allSkillsLogos'
 
 const SkillsText = () => {
 	const { language } = useLanguage()

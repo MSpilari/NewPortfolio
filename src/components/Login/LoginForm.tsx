@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useAuthentication } from '../../../hooks/authenticationHook'
+import { useAuthentication } from '../../hooks/authenticationHook'
 import { useRouter } from 'next/router'
 
 const defaultState = {
