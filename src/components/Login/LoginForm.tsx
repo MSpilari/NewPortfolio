@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useAuthentication } from '../../hooks/authenticationHook'
-import { useRouter } from 'next/router'
 
 const defaultState = {
 	email: '',
@@ -8,9 +7,8 @@ const defaultState = {
 }
 
 const LoginForm = () => {
-	const { signIn, userInfo } = useAuthentication()
+	const { signIn } = useAuthentication()
 	const [allValues, setAllValues] = useState(defaultState)
-	const { push } = useRouter()
 	return (
 		<div
 			className='w-full h-full mx-auto z-10 text-white 
@@ -21,7 +19,6 @@ const LoginForm = () => {
 				onSubmit={e => {
 					e.preventDefault()
 					signIn(allValues)
-					if (userInfo) return push('/addProject')
 				}}
 				className='flex flex-col items-center   w-[90%] mx-auto'
 			>
