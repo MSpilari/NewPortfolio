@@ -1,6 +1,5 @@
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { useRouter } from 'next/router'
 import { createContext, useState } from 'react'
-import { auth } from '../../firebase'
 
 interface ISignIn {
 	email: string
@@ -17,18 +16,23 @@ const AuthenticationContext = createContext(AuthenticationContextDefault)
 
 const AuthenticationProvider = ({ children }) => {
 	const [userInfo, setUserInfo] = useState(null)
+	const { push } = useRouter()
 
 	const signIn = async ({ email, password }: ISignIn) => {
-		try {
-			const UserCredentials = await signInWithEmailAndPassword(
-				auth,
-				email,
-				password
-			)
-			const { user } = UserCredentials
-			return setUserInfo(user)
-		} catch (error) {
-			return setUserInfo(null)
+		const res = await fetch(
+			`${process.env.NEXT_PUBLIC_CURRENT_URL}/api/login`,
+			{
+				method: 'POST',
+				body: JSON.stringify({ email, password }),
+				headers: { 'Content-Type': 'application/json' }
+			}
+		)
+
+		const credentials = await res.json()
+
+		if (credentials.message) {
+			setUserInfo(credentials.message)
+			return push('/addProject')
 		}
 	}
 
