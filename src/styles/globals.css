@@ -12,19 +12,20 @@ body {
 	background-color: black;
 }
 
-.linkButton {
-	@apply text-3xl flex flex-col items-center justify-center 
-	relative text-white hover:text-yellow-500;
-}
-
-.linkButtonSvg {
-	@apply absolute top-1/2;
-}
-.linkButtonP {
-	@apply absolute top-1/2 text-lg font-bold opacity-0 text-yellow-500;
-}
-
 @layer utilities {
+	.linkButton {
+		@apply text-3xl flex flex-col items-center justify-center 
+		relative text-white hover:text-yellow-500;
+	}
+
+	.linkButtonSvg {
+		@apply absolute top-1/2;
+	}
+
+	.linkButtonP {
+		@apply absolute top-1/2 text-lg font-bold opacity-0 text-yellow-500;
+	}
+
 	button.linkAnimation:hover p {
 		opacity: 1;
 		transition: ease-out 1s;
