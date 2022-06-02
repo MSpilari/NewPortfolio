@@ -3,7 +3,7 @@ import AnimationMobileFile from '../src/assets/animationMobile.json'
 
 import { Animation } from '../src/components/03_Organisms/Animation'
 import { Header } from '../src/components/03_Organisms/Header'
-import { Greet } from '../src/components/Home/Greet'
+import { Greet } from '../src/components/03_Organisms/Greet'
 
 const HomePage = () => {
 	return (
@@ -21,6 +21,7 @@ const HomePage = () => {
 					animationFileMobile={AnimationMobileFile}
 					animationFileDesktop={AnimationDesktopFile}
 				/>
+
 				<Greet />
 			</div>
 		</div>
