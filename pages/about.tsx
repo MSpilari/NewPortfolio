@@ -3,8 +3,8 @@ import AboutDesktopFile from '../src/assets/AboutAnimation.json'
 
 import { Animation } from '../src/components/01_Atoms/Animation'
 import { Header } from '../src/components/03_Organisms/Header'
+import { AboutText } from '../src/components/03_Organisms/AboutText'
 import { AnimationWrapper } from '../src/components/04_Templates/AnimationWrapper'
-import { AboutText } from '../src/components/About/AboutText'
 
 const About = () => {
 	return (
@@ -16,7 +16,7 @@ const About = () => {
 
 			<div
 				className='flex flex-col h-full relative 
-											lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '
+											lg:flex-row lg:w-[calc(100%-80px)]'
 			>
 				<AnimationWrapper
 					className='w-full overflow-hidden absolute top-[30%] max-w-4xl 
