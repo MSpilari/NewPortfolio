@@ -1,5 +1,5 @@
 import { AddNewProject } from '../src/components/AddProject/AddNewProject'
-import { Header } from '../src/components/UI/Header'
+import { Header } from '../src/components/03_Organisms/Header'
 import { useAuthentication } from '../src/hooks/authenticationHook'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
