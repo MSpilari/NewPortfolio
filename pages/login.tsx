@@ -1,4 +1,4 @@
-import { Header } from '../src/components/UI/Header'
+import { Header } from '../src/components/03_Organisms/Header'
 import { AnimationLoginDesktop } from '../src/components/Login/AnimationLoginDesktop'
 import { LoginForm } from '../src/components/Login/LoginForm'
 
