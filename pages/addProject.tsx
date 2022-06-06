@@ -1,4 +1,4 @@
-import { AddNewProject } from '../src/components/AddProject/AddNewProject'
+import { AddNewProject } from '../src/components/03_Organisms/AddNewProject'
 import { Header } from '../src/components/03_Organisms/Header'
 import { useAuthentication } from '../src/hooks/authenticationHook'
 import { useRouter } from 'next/router'
