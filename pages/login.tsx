@@ -2,7 +2,7 @@ import LoginFileAnimationDesktop from '../src/assets/animationLoginDesktop.json'
 import { Animation } from '../src/components/01_Atoms/Animation'
 import { Header } from '../src/components/03_Organisms/Header'
 import { AnimationWrapper } from '../src/components/04_Templates/AnimationWrapper'
-import { LoginForm } from '../src/components/Login/LoginForm'
+import { LoginForm } from '../src/components/03_Organisms/LoginForm'
 
 const Login = () => {
 	return (
