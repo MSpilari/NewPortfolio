@@ -1,6 +1,11 @@
 import { useLanguage } from '../../../hooks/languageHook'
 
-const CarouselWrapper: React.FC = ({ children }) => {
+type ICarouselWrapper = {
+	children : JSX.Element
+}
+
+
+const CarouselWrapper: React.FC<ICarouselWrapper> = ({ children }) => {
 	const { language } = useLanguage()
 
 	return (
