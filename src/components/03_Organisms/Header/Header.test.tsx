@@ -1,21 +1,9 @@
+// Remember to import the mocks before the element you want to test/render
+import '../../../tests/mocks/matchMedia.mock'
 import { Header } from './index'
 import { render } from '@testing-library/react'
 
 describe('Header tests', () => {
-	Object.defineProperty(window, 'matchMedia', {
-		writable: true,
-		value: jest.fn().mockImplementation(query => ({
-			matches: false,
-			media: query,
-			onchange: null,
-			addListener: jest.fn(), // deprecated
-			removeListener: jest.fn(), // deprecated
-			addEventListener: jest.fn(),
-			removeEventListener: jest.fn(),
-			dispatchEvent: jest.fn()
-		}))
-	})
-
 	it('Should have a logo', () => {
 		const { getByAltText } = render(<Header />)
 
@@ -33,10 +21,10 @@ describe('Header tests', () => {
 	})
 
 	it('Should have five Link buttons rendered on the screen', () => {
-		const { getAllByRole } = render(<Header />)
+		const { getAllByTestId } = render(<Header />)
 
-		const AllButtons = getAllByRole('link')
+		const AllButtons = getAllByTestId('NavLink')
 
-		console.log(AllButtons)
+		expect(AllButtons).toHaveLength(5)
 	})
 })
