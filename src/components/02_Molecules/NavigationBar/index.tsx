@@ -11,7 +11,7 @@ const NavigationBar = () => {
 										lg:flex-col lg:static lg:h-96 xl:h-full'
 		>
 			<Link href='/' passHref>
-				<a>
+				<a data-testid='NavLink'>
 					{/* Wrap those Buttons(functional components) inside a anchor tag to avoid the warning React.forwardRef*/}
 					<Button
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
@@ -23,7 +23,7 @@ const NavigationBar = () => {
 				</a>
 			</Link>
 			<Link href='/about' passHref>
-				<a>
+				<a data-testid='NavLink'>
 					<Button
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsPerson className='lg:linkButtonSvg' />}
@@ -34,7 +34,7 @@ const NavigationBar = () => {
 				</a>
 			</Link>
 			<Link href='/skills' passHref>
-				<a>
+				<a data-testid='NavLink'>
 					<Button
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsGear className='lg:linkButtonSvg' />}
@@ -45,7 +45,7 @@ const NavigationBar = () => {
 				</a>
 			</Link>
 			<Link href='/projects' passHref>
-				<a>
+				<a data-testid='NavLink'>
 					<Button
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<MdWorkOutline className='lg:linkButtonSvg' />}
@@ -56,7 +56,7 @@ const NavigationBar = () => {
 				</a>
 			</Link>
 			<Link href='/login' passHref>
-				<a>
+				<a data-testid='NavLink'>
 					<Button
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsShieldLock className='lg:linkButtonSvg' />}
