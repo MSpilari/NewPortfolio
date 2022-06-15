@@ -1,6 +1,8 @@
-import { Header } from '../src/components/UI/Header'
-import { AnimationLoginDesktop } from '../src/components/Login/AnimationLoginDesktop'
-import { LoginForm } from '../src/components/Login/LoginForm'
+import LoginFileAnimationDesktop from '../src/assets/animationLoginDesktop.json'
+import { Animation } from '../src/components/01_Atoms/Animation'
+import { Header } from '../src/components/03_Organisms/Header'
+import { AnimationWrapper } from '../src/components/04_Templates/AnimationWrapper'
+import { LoginForm } from '../src/components/03_Organisms/LoginForm'
 
 const Login = () => {
 	return (
@@ -8,7 +10,13 @@ const Login = () => {
 			<Header />
 
 			<div className='flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '>
-				<AnimationLoginDesktop />
+				<AnimationWrapper>
+					<Animation
+						className='w-full h-full'
+						animationFileDesktop={LoginFileAnimationDesktop}
+					/>
+				</AnimationWrapper>
+
 				<LoginForm />
 			</div>
 		</div>
