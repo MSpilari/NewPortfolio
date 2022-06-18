@@ -14,6 +14,7 @@ const NavigationBar = () => {
 				<a data-testid='NavLink'>
 					{/* Wrap those Buttons(functional components) inside a anchor tag to avoid the warning React.forwardRef*/}
 					<Button
+						data-testid='homeButton'
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<AiOutlineHome className='lg:linkButtonSvg' />}
 						animationText={
@@ -25,6 +26,7 @@ const NavigationBar = () => {
 			<Link href='/about' passHref>
 				<a data-testid='NavLink'>
 					<Button
+						data-testid='aboutButton'
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsPerson className='lg:linkButtonSvg' />}
 						animationText={
@@ -36,6 +38,7 @@ const NavigationBar = () => {
 			<Link href='/skills' passHref>
 				<a data-testid='NavLink'>
 					<Button
+						data-testid='skillsButton'
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsGear className='lg:linkButtonSvg' />}
 						animationText={
@@ -47,6 +50,7 @@ const NavigationBar = () => {
 			<Link href='/projects' passHref>
 				<a data-testid='NavLink'>
 					<Button
+						data-testid='projectsButton'
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<MdWorkOutline className='lg:linkButtonSvg' />}
 						animationText={
@@ -58,6 +62,7 @@ const NavigationBar = () => {
 			<Link href='/login' passHref>
 				<a data-testid='NavLink'>
 					<Button
+						data-testid='loginButton'
 						className='text-2xl text-white lg:linkButton lg:linkAnimation'
 						iconLabel={<BsShieldLock className='lg:linkButtonSvg' />}
 						animationText={
