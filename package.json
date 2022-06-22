@@ -6,7 +6,8 @@
 		"dev": "set NODE_ENV=development&&next dev",
 		"build": "next build",
 		"start": "next start",
-		"test": "jest --watchAll"
+		"test-local": "jest --watchAll",
+		"test-ci": "jest"
 	},
 	"dependencies": {
 		"firebase": "^9.6.10",
