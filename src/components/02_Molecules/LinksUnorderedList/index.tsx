@@ -23,6 +23,7 @@ const LinksUnorderedList = () => {
 		>
 			<ListItem className='mx-2 lg:my-1' title='Switch language'>
 				<Button
+					title='Language button'
 					iconLabel={
 						language === allLanguages.ptBr ? <GiUsaFlag /> : <GiBrazilFlag />
 					}
