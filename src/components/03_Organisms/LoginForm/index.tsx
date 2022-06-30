@@ -16,9 +16,10 @@ const LoginForm = () => {
 	}
 
 	const inputChanges = (e: ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target
 		return setAllValues(prevState => ({
 			...prevState,
-			[e.target.name]: [e.target.value]
+			[name]: value
 		}))
 	}
 
