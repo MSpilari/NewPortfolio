@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { signInWithEmailAndPassword, UserCredential } from 'firebase/auth'
 import { useRouter } from 'next/router'
 import { createContext, useState } from 'react'
 import { auth } from '../../firebase'
@@ -23,9 +23,9 @@ const AuthenticationProvider = ({ children }) => {
 	const signIn = async ({ email, password }: ISignIn) => {
 		const credentials = await signInWithEmailAndPassword(auth, email, password)
 			.then(credentials => credentials)
-			.catch(error => error)
+			.catch(error => null)
 
-		if (credentials.user.accessToken) {
+		if (credentials && credentials.user.accessToken) {
 			setUserInfo(credentials.user.accessToken)
 			return push('/addProject')
 		}
