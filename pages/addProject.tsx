@@ -1,8 +1,7 @@
-import { AddNewProject } from '../src/components/03_Organisms/AddNewProject'
-import { Header } from '../src/components/03_Organisms/Header'
-import { useAuthentication } from '../src/hooks/authenticationHook'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { AdminChoices } from '../src/components/03_Organisms/AdminChoices'
+import { useAuthentication } from '../src/hooks/authenticationHook'
 
 const AddProject = () => {
 	const { userInfo } = useAuthentication()
@@ -13,16 +12,8 @@ const AddProject = () => {
 	}, [])
 
 	return (
-		<div className='w-full h-full lg:flex'>
-			<Header />
-
-			<div className='flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '>
-				{userInfo ? (
-					<AddNewProject />
-				) : (
-					<p className='text-white'>Redirect...</p>
-				)}
-			</div>
+		<div className='w-full h-full flex flex-col'>
+			{userInfo ? <AdminChoices /> : <p className='text-white'>Redirect...</p>}
 		</div>
 	)
 }
