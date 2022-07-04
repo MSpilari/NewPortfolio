@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, UserCredential } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'next/router'
 import { createContext, useState } from 'react'
 import { auth } from '../../firebase'
@@ -10,7 +10,7 @@ interface ISignIn {
 
 const AuthenticationContextDefault = {
 	userInfo: null,
-	signIn: props => {},
+	signIn: (props: ISignIn): any => {},
 	signOut: () => {}
 }
 
@@ -20,7 +20,7 @@ const AuthenticationProvider = ({ children }) => {
 	const [userInfo, setUserInfo] = useState(null)
 	const { push } = useRouter()
 
-	const signIn = async ({ email, password }: ISignIn) => {
+	const signIn = async ({ email, password }) => {
 		const credentials = await signInWithEmailAndPassword(auth, email, password)
 			.then(credentials => credentials)
 			.catch(error => null)
