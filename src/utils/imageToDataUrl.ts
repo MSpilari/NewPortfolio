@@ -1,5 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { IAllInfo } from '../components/03_Organisms/AddNewProject'
+import { IAllInfo } from '../components/02_Molecules/AddNewProject'
 
 const imageToDataUrl = (
 	event: ChangeEvent<HTMLInputElement>,
