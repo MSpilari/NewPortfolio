@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from 'react'
 import { inputChanges } from '../../../utils/inputChanges'
-import { IAllInfo } from '../../03_Organisms/AddNewProject'
+import { IAllInfo } from '../../02_Molecules/AddNewProject'
 
 interface ITitleGitProjectInput {
 	allInfo: IAllInfo

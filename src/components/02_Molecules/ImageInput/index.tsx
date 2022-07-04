@@ -1,7 +1,7 @@
 import { Dispatch, FC, SetStateAction, useRef } from 'react'
 import { BsFillCameraFill } from 'react-icons/bs'
 import { imageToDataUrl } from '../../../utils/imageToDataUrl'
-import { IAllInfo } from '../../03_Organisms/AddNewProject'
+import { IAllInfo } from '../../02_Molecules/AddNewProject'
 
 interface IImageInput {
 	allInfo: IAllInfo
