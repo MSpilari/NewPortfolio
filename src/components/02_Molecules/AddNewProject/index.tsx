@@ -10,13 +10,15 @@ export interface IAllInfo {
 	projectLink: string
 }
 
+const defaultState = {
+	image: '',
+	title: '',
+	githubLink: '',
+	projectLink: ''
+}
+
 const AddNewProject = () => {
-	const [allInfo, setAllInfo] = useState({
-		image: '',
-		title: '',
-		githubLink: '',
-		projectLink: ''
-	} as IAllInfo)
+	const [allInfo, setAllInfo] = useState({} as IAllInfo)
 
 	const { image, githubLink, title, projectLink } = allInfo
 
@@ -31,6 +33,7 @@ const AddNewProject = () => {
 				onSubmit={e => {
 					e.preventDefault()
 					SubmitAProject(allInfo)
+					setAllInfo(defaultState)
 				}}
 				className='flex flex-col items-center w-[90%] mx-auto'
 			>
