@@ -12,8 +12,8 @@ const Login = () => {
 			<div className='flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '>
 				<AnimationWrapper>
 					<Animation
-						className='w-full h-full'
-						animationFileDesktop={LoginFileAnimationDesktop}
+						className='hidden w-full h-full lg:flex'
+						animationFile={LoginFileAnimationDesktop}
 					/>
 				</AnimationWrapper>
 
