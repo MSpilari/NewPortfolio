@@ -24,10 +24,14 @@ const About = () => {
 											lg:h-full lg:top-0 lg:left-0 lg:max-w-none'
 				>
 					<Animation
-						animationFileMobile={AboutMobileFile}
-						animationFileDesktop={AboutDesktopFile}
+						animationFile={AboutMobileFile}
 						className='w-full h-[calc(100%-128px)] 
-												lg:h-full'
+											 lg:hidden'
+					/>
+					<Animation
+						animationFile={AboutDesktopFile}
+						className='hidden w-full h-[calc(100%-128px)] 
+											 lg:h-full lg:flex'
 					/>
 				</AnimationWrapper>
 
