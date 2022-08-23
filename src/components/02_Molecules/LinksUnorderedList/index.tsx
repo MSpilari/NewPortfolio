@@ -17,10 +17,7 @@ const LinksUnorderedList = () => {
 		)
 
 	return (
-		<ul
-			className='flex w-20 items-center justify-around text-white text-2xl ml-auto mr-4 
-                  lg:flex-col lg:w-full lg:h-full lg:mr-0 lg:ml-0'
-		>
+		<ul className='flex w-20 items-center justify-around text-white text-2xl ml-auto mr-4 lg:flex-col lg:w-full lg:h-full lg:mr-0 lg:ml-0'>
 			<ListItem className='mx-2 lg:my-1' title='Switch language'>
 				<Button
 					title='Language button'

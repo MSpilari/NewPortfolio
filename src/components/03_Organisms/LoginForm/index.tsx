@@ -24,11 +24,7 @@ const LoginForm = () => {
 	}
 
 	return (
-		<div
-			className='w-full h-full mx-auto z-10 text-white flex flex-col items-center font-pushster justify-center 
-                bg-[rgba(0,0,0,0.5)] 
-                  lg:w-full lg:h-full '
-		>
+		<div className='w-full h-full mx-auto z-10 text-white flex flex-col items-center font-pushster justify-center bg-[rgba(0,0,0,0.5)] lg:w-full lg:h-full '>
 			<h1 className='text-2xl text-yellow-500 mb-3'>Login</h1>
 
 			<form

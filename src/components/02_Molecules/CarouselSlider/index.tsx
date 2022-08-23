@@ -29,8 +29,7 @@ const CarouselSlider: React.FC<ProjectsSlider> = ({ projectsInfo }) => {
 			<Button
 				iconLabel={<BsFillArrowLeftSquareFill />}
 				onClick={() => carouselScroll(carouselWrapper.current, 'left')}
-				className='text-3xl fixed top-1/2 left-0 text-yellow-500 z-10 
-                          lg:left-[80px]'
+				className='text-3xl fixed top-1/2 left-0 text-yellow-500 z-10 lg:left-[80px]'
 			/>
 
 			<div className='flex absolute overflow-x-auto'>

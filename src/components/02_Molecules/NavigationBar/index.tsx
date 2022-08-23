@@ -6,10 +6,7 @@ import { Button } from '../../01_Atoms/Button'
 
 const NavigationBar = () => {
 	return (
-		<nav
-			className='flex fixed bottom-0 w-full h-12 items-center justify-around z-20 bg-zinc-900
-										lg:flex-col lg:static lg:h-96 xl:h-full'
-		>
+		<nav className='flex fixed bottom-0 w-full h-12 items-center justify-around z-20 bg-zinc-900 lg:flex-col lg:static lg:h-96 xl:h-full'>
 			<Link href='/' passHref>
 				<a data-testid='NavLink'>
 					{/* Wrap those Buttons(functional components) inside a anchor tag to avoid the warning React.forwardRef*/}
@@ -23,6 +20,7 @@ const NavigationBar = () => {
 					/>
 				</a>
 			</Link>
+
 			<Link href='/about' passHref>
 				<a data-testid='NavLink'>
 					<Button
@@ -35,6 +33,7 @@ const NavigationBar = () => {
 					/>
 				</a>
 			</Link>
+
 			<Link href='/skills' passHref>
 				<a data-testid='NavLink'>
 					<Button
@@ -47,6 +46,7 @@ const NavigationBar = () => {
 					/>
 				</a>
 			</Link>
+
 			<Link href='/projects' passHref>
 				<a data-testid='NavLink'>
 					<Button
@@ -59,6 +59,7 @@ const NavigationBar = () => {
 					/>
 				</a>
 			</Link>
+
 			<Link href='/login' passHref>
 				<a data-testid='NavLink'>
 					<Button
