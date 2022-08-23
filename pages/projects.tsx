@@ -7,16 +7,10 @@ import ProjectDesktopAnimationFile from '../src/assets/projectAnimationDesktop.j
 
 const Projects = ({ data }) => {
 	return (
-		<div
-			className='w-screen h-screen 
-								 lg:flex'
-		>
+		<div className='w-screen h-screen lg:flex'>
 			<Header />
 
-			<div
-				className='flex flex-col h-[calc(100%-128px)] relative 
-									 lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '
-			>
+			<div className='flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '>
 				<AnimationWrapper className='w-full h-full overflow-hidden absolute'>
 					<Animation
 						className='hidden w-full lg:flex'
