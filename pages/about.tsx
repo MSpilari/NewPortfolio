@@ -8,30 +8,19 @@ import { AnimationWrapper } from '../src/components/04_Templates/AnimationWrappe
 
 const About = () => {
 	return (
-		<div
-			className='w-screen h-screen 
-											lg:flex'
-		>
+		<div className='w-screen h-screen lg:flex'>
 			<Header />
 
-			<div
-				className='flex flex-col h-full relative 
-											lg:flex-row lg:w-[calc(100%-80px)]'
-			>
-				<AnimationWrapper
-					className='w-full overflow-hidden absolute top-[30%] max-w-4xl 
-											sm:left-0 sm:top-[15%]
-											lg:h-full lg:top-0 lg:left-0 lg:max-w-none'
-				>
+			<div className='flex flex-col h-full relative lg:flex-row lg:w-[calc(100%-80px)]'>
+				<AnimationWrapper className='w-full overflow-hidden absolute top-[30%] max-w-4xl sm:left-0 sm:top-[15%] lg:h-full lg:top-0 lg:left-0 lg:max-w-none'>
 					<Animation
 						animationFile={AboutMobileFile}
-						className='w-full h-[calc(100%-128px)] 
-											 lg:hidden'
+						className='w-full h-[calc(100%-128px)] lg:hidden'
 					/>
+
 					<Animation
 						animationFile={AboutDesktopFile}
-						className='hidden w-full h-[calc(100%-128px)] 
-											 lg:h-full lg:flex'
+						className='hidden w-full h-[calc(100%-128px)] lg:h-full lg:flex'
 					/>
 				</AnimationWrapper>
 

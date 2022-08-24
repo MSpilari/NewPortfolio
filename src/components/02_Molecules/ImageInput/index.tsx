@@ -35,6 +35,7 @@ const ImageInput: FC<IImageInput> = ({ allInfo, setAllInfo }) => {
 						type='button'
 					>
 						<BsFillCameraFill className='text-3xl' />
+
 						<p className='text-lg text-center'>
 							Click here to upload a picture
 						</p>

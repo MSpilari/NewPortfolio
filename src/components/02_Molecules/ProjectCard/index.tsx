@@ -12,10 +12,7 @@ interface IProject {
 
 const ProjectCard = ({ image, prjLink, title, gitLink }: IProject) => {
 	return (
-		<div
-			className='flex flex-col font-pushster w-[200px] h-[50vh] mx-3 bg-[rgba(0,0,0,0.5)] rounded-md 
-                  lg:w-[350px] lg:h-[350px]'
-		>
+		<div className='flex flex-col font-pushster w-[200px] h-[50vh] mx-3 bg-[rgba(0,0,0,0.5)] rounded-md lg:w-[350px] lg:h-[350px]'>
 			<div className='relative w-full h-3/4 px-2 rounded-md overflow-hidden'>
 				<Image
 					layout='fill'

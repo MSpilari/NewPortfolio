@@ -10,10 +10,7 @@ const Skills = () => {
 		<div className='w-screen h-screen lg:flex'>
 			<Header />
 
-			<div
-				className='flex flex-col  relative 
-      		         lg:flex-row lg:w-[calc(100%-80px)] lg:h-full'
-			>
+			<div className='flex flex-col  relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full'>
 				<AnimationWrapper className='w-full h-full overflow-hidden absolute lg:flex'>
 					<Animation
 						animationFile={SkillsDesktopAnimationFile}
