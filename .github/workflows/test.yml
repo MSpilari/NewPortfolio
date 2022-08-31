@@ -10,19 +10,55 @@ on:
     branches: ['master']
 
 jobs:
-  build:
+  LintTest:
+    name: Lint
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
           cache: 'yarn'
 
-      - name: Install dependencies
-        run: yarn
+      - name: Install Dependencies
+        run: |
+          echo "Installing Dependencies..."
+          yarn
 
-      - name: Running tests...
-        run: yarn test-ci
+      - name: Run Linting
+        run: |
+          echo "Running your linting tests..."
+        env:
+          CI: true
+
+  JestTests:
+    runs-on: ubuntu-latest
+
+    needs: LintTest
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: |
+          echo "Installing Dependencies..."
+          yarn
+
+      - name: Running tests
+        run: |
+          echo "Running your Jest tests..."
+          yarn test-ci
+        env:
+          CI: true
