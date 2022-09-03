@@ -25,6 +25,7 @@ const LinksUnorderedList = () => {
 						language === allLanguages.ptBr ? <GiUsaFlag /> : <GiBrazilFlag />
 					}
 					onClick={() => handleLanguage()}
+					aria-label='Switch Language'
 				/>
 			</ListItem>
 
@@ -34,6 +35,7 @@ const LinksUnorderedList = () => {
 					href='https://www.github.com/MSpilari'
 					target='_blank'
 					rel='noopener noreferrer'
+					aria-label='Github Link'
 				/>
 			</ListItem>
 
@@ -43,6 +45,7 @@ const LinksUnorderedList = () => {
 					href='https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/'
 					target='_blank'
 					rel='noopener noreferrer'
+					aria-label='LinkedIn Link'
 				/>
 			</ListItem>
 		</ul>
