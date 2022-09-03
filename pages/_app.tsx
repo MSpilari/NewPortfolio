@@ -10,7 +10,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 			<LanguageProvider>
 				<Head>
 					<title>MSpilari | FullStack Developer</title>
-
+					<meta
+						name='description'
+						content='Matheus Bernardes Spilari, MSpilari, FullStack Developer, portfólio para demonstrar as tecnologias que sei utilizar'
+					/>
 					<link rel='icon' href='/LogoYB.svg' />
 				</Head>
 				<Component {...pageProps} />

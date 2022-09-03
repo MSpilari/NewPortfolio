@@ -17,6 +17,7 @@ const NavigationBar = () => {
 						animationText={
 							<p className='hidden lg:flex lg:linkButtonP'>Home</p>
 						}
+						aria-label='Home Button'
 					/>
 				</a>
 			</Link>
@@ -30,6 +31,7 @@ const NavigationBar = () => {
 						animationText={
 							<p className='hidden lg:flex lg:linkButtonP'>About</p>
 						}
+						aria-label='About Button'
 					/>
 				</a>
 			</Link>
@@ -43,6 +45,7 @@ const NavigationBar = () => {
 						animationText={
 							<p className='hidden lg:flex lg:linkButtonP'>Skills</p>
 						}
+						aria-label='Skills Button'
 					/>
 				</a>
 			</Link>
@@ -56,6 +59,7 @@ const NavigationBar = () => {
 						animationText={
 							<p className='hidden lg:flex lg:linkButtonP'>Projects</p>
 						}
+						aria-label='Projects Button'
 					/>
 				</a>
 			</Link>
@@ -69,6 +73,7 @@ const NavigationBar = () => {
 						animationText={
 							<p className='hidden lg:flex lg:linkButtonP'>Login</p>
 						}
+						aria-label='Login Button'
 					/>
 				</a>
 			</Link>
