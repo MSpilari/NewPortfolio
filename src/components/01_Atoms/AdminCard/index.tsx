@@ -1,6 +1,5 @@
-import { deleteDoc, doc } from 'firebase/firestore'
 import Image from 'next/image'
-import { db } from '../../../../firebase'
+import { deleteProject } from '../../../utils/deleteProject'
 
 type IAdminCard = {
 	id: string
@@ -9,10 +8,6 @@ type IAdminCard = {
 }
 
 const AdminCard = ({ id, title, projectImage }: IAdminCard) => {
-	const deleteProject = (projectId: string) => {
-		return deleteDoc(doc(db, 'projects', projectId))
-	}
-
 	return (
 		<li
 			className='w-[60%] mx-auto my-1 h-28 text-white flex items-center justify-between 
@@ -34,7 +29,7 @@ const AdminCard = ({ id, title, projectImage }: IAdminCard) => {
 
 			<button
 				className='mr-3 text-xl border-2 rounded-full p-2 border-red-600 text-red-600'
-				onClick={() => deleteProject(id)}
+				onClick={() => deleteProject(id, title)}
 			>
 				X
 			</button>
