@@ -1,26 +1,19 @@
 import Image from 'next/image'
+import { useMediaQuery } from 'react-responsive'
 
-import LargeLogo from '../../../../public/Logo(1).svg'
-import SmallLogo from '../../../../public/Logo.svg'
+import LogoMobile from '../../../../public/LogoMobile.png'
+import LogoDesktop from '../../../../public/Logo.png'
 
 const Logo: React.FC = () => {
+	const isMobile = useMediaQuery({ query: '(max-width:768px)' })
+
 	return (
 		<div className='w-40 ml-3 h-full flex items-center lg:w-full lg:ml-0 lg:justify-center'>
-			<div className='lg:hidden'>
-				<Image
-					className='object-cover'
-					src={SmallLogo}
-					alt='Logo MSpilari Mobile'
-				/>
-			</div>
-
-			<div className='hidden lg:flex'>
-				<Image
-					className='object-cover'
-					src={LargeLogo}
-					alt='Logo MSpilari Desktop'
-				/>
-			</div>
+			<Image
+				className='object-cover'
+				src={isMobile ? LogoMobile : LogoDesktop}
+				alt='Logo MSpilari Mobile'
+			/>
 		</div>
 	)
 }
