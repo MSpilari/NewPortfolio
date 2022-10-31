@@ -2,7 +2,7 @@
 
 ![Vercel](https://vercelbadge.vercel.app/api/mspilari/newportfolio?style=for-the-badge)
 
-![image](./public/Logo.svg)
+![image](./public/LogoMobile.png)
 
 ## :dart: Objectives
 
