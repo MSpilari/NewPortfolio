@@ -11,7 +11,7 @@ const Logo: React.FC = () => {
 		<div className='w-40 ml-3 h-full flex items-center relative lg:w-full lg:ml-0 lg:justify-center'>
 			<Image
 				src={isMobile ? LogoMobile : LogoDesktop}
-				alt='Logo MSpilari Mobile'
+				alt='Logo MSpilari'
 				objectFit='contain'
 				layout='fill'
 				sizes='25vw'
