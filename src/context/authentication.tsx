@@ -23,7 +23,7 @@ const AuthenticationProvider = ({ children }) => {
 	const signIn = async ({ email, password }) => {
 		const credentials = await signInWithEmailAndPassword(auth, email, password)
 			.then(credentials => credentials)
-			.catch(error => null)
+			.catch(() => null)
 
 		if (credentials && credentials.user.accessToken) {
 			setUserInfo(credentials.user.accessToken)

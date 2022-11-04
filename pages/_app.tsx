@@ -1,8 +1,8 @@
+import '../src/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { AuthenticationProvider } from '../src/context/authentication'
 import { LanguageProvider } from '../src/context/language'
-import '../src/styles/globals.css'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 	return (
@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
 						name='description'
 						content='Matheus Bernardes Spilari, MSpilari, FullStack Developer, portfólio para demonstrar as tecnologias que sei utilizar'
 					/>
-					<link rel='icon' href='/LogoYB.svg' />
+					<link rel='icon' href='/Logo.png' />
 				</Head>
 				<Component {...pageProps} />
 			</LanguageProvider>
