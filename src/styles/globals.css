@@ -46,4 +46,26 @@ body {
 		opacity: 1;
 		transition: ease-out 1s;
 	}
+
+	.flipCard {
+		perspective: 100px;
+	}
+	
+	.flipCardBack {
+		transform: rotateY(180deg);
+	}
+
+	.flipCardInner {
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	}
+
+	.flipCard:hover .flipCardInner {
+		transform: rotateY(180deg);
+	}
+
+	.backfaceInvisible {
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
 }
