@@ -37,13 +37,25 @@ body {
 		transition: ease-out 1s;
 	}
 
-	div.animateSkill:hover div:first-child {
-		opacity: 0;
-		transition: ease-out 1s;
+	.flipCard {
+		perspective: 100px;
 	}
 
-	div.animateSkill:hover div:last-child {
-		opacity: 1;
-		transition: ease-out 1s;
+	.flipCardBack {
+		transform: rotateY(180deg);
+	}
+
+	.flipCardInner {
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	}
+
+	.flipCard:hover .flipCardInner {
+		transform: rotateY(180deg);
+	}
+
+	.backfaceInvisible {
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 }
