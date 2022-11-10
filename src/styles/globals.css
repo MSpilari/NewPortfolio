@@ -37,20 +37,10 @@ body {
 		transition: ease-out 1s;
 	}
 
-	div.animateSkill:hover div:first-child {
-		opacity: 0;
-		transition: ease-out 1s;
-	}
-
-	div.animateSkill:hover div:last-child {
-		opacity: 1;
-		transition: ease-out 1s;
-	}
-
 	.flipCard {
 		perspective: 100px;
 	}
-	
+
 	.flipCardBack {
 		transform: rotateY(180deg);
 	}
