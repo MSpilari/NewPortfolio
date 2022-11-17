@@ -9,10 +9,9 @@ const Loading = () => {
 
 	const isMobile = useMediaQuery({ query: '(max-width:768px)' })
 
-	const [loading, setLoading] = useState(false)
+	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
-		setLoading(true)
 		setTimeout(() => setLoading(false), 1500)
 	}, [])
 
@@ -36,16 +35,11 @@ const Loading = () => {
 		<div
 			className={`absolute flex flex-col items-center justify-center gap-1 overflow-hidden w-screen h-0 z-20 lg:w-0 lg:h-screen 
 			bg-gradient-to-b lg:bg-gradient-to-r from-black to-yellow-400 
-			${
-				loading
-					? isMobile
-						? 'animate-YFtransition'
-						: 'animate-XFtransition'
-					: isMobile
-					? 'animate-YBtransition'
-					: 'animate-XBtransition'
-			}
-			`}
+			${loading && isMobile && 'animate-YFtransition'}
+			${!loading && isMobile && 'animate-YBtransition'}
+			${loading && !isMobile && 'animate-XFtransition'}
+			${!loading && !isMobile && 'animate-XBtransition'}
+		`}
 		>
 			<span className='relative flex items-center justify-center w-52 h-32 animate-bounce'>
 				<Image
