@@ -1,12 +1,11 @@
+'use client'
+
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { createContext, useState } from 'react'
 import { auth } from '../../firebase'
-
-interface ISignIn {
-	email: string
-	password: string
-}
+import { IAuthContext } from '../types/AuthContext'
+import { ISignIn } from '../types/SignIn'
 
 const AuthenticationContextDefault = {
 	userInfo: null,
@@ -14,10 +13,12 @@ const AuthenticationContextDefault = {
 	signOut: () => {}
 }
 
-const AuthenticationContext = createContext(AuthenticationContextDefault)
+const AuthenticationContext = createContext<IAuthContext>(
+	AuthenticationContextDefault
+)
 
 const AuthenticationProvider = ({ children }) => {
-	const [userInfo, setUserInfo] = useState(null)
+	const [userInfo, setUserInfo] = useState<string | null>(null)
 	const { push } = useRouter()
 
 	const signIn = async ({ email, password }) => {
