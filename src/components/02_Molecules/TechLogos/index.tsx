@@ -1,5 +1,5 @@
-import { allLogos } from '../../../config/allSkillsLogos'
-import { Card } from '../../01_Atoms/Card'
+import { allLogos } from '@config/allSkillsLogos'
+import { Card } from '@components/01_Atoms/Card'
 
 const TechLogos: React.FC = () => {
 	return (
