@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BsGear, BsPerson, BsShieldLock } from 'react-icons/bs'
 import { MdWorkOutline } from 'react-icons/md'
-import { Button } from '../../01_Atoms/Button'
+import { Button } from '@components/01_Atoms/Button'
 
 const NavigationBar = () => {
 	return (
