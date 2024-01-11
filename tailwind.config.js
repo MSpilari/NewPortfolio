@@ -17,8 +17,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				theNautigal: ['The Nautigal', 'cursive'],
-				pushster: ['Pushster', 'cursive']
+				theNautigal: ['var(--font-the-nautigal)'],
+				lobster: ['var(--font-lobster)']
 			},
 			keyframes: {
 				XFtransition: {
