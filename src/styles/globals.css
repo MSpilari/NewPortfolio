@@ -10,7 +10,6 @@
 
 body {
 	background-color: black;
-	font-family: 'Pushster', cursive;
 }
 
 @layer utilities {
