@@ -19,7 +19,17 @@
 				"name": "next"
 			}
 		],
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"baseUrl": ".",
+		"paths": {
+			"@components/*": ["src/components/*"],
+			"@assets/*": ["src/assets/*"],
+			"@types/*": ["src/types/*"],
+			"@public/*": ["public/*"],
+			"@config/*": ["src/config/*"],
+			"@context/*": ["src/context/*"],
+			"@hooks/*": ["src/hooks/*"]
+		}
 	},
 	"include": [
 		"next-env.d.ts",
