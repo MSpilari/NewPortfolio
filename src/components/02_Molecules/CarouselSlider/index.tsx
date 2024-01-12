@@ -1,22 +1,15 @@
+'use client'
+
 import { useRef } from 'react'
 import {
 	BsFillArrowLeftSquareFill,
 	BsFillArrowRightSquareFill
 } from 'react-icons/bs'
 
-import { carouselScroll } from '../../../utils/carouselScroll'
-import { Button } from '../../01_Atoms/Button'
-import { ProjectCard } from '../ProjectCard'
-
-type ProjectsSlider = {
-	projectsInfo: {
-		id: string
-		projectImage: string
-		title: string
-		projectLink: string
-		githubLink: string
-	}[]
-}
+import { carouselScroll } from '@utils/carouselScroll'
+import { Button } from '@components/01_Atoms/Button'
+import { ProjectCard } from '@components/02_Molecules/ProjectCard'
+import { ProjectsSlider } from '@dto/Carousel'
 
 const CarouselSlider: React.FC<ProjectsSlider> = ({ projectsInfo }) => {
 	const carouselWrapper = useRef<HTMLDivElement | null>(null)

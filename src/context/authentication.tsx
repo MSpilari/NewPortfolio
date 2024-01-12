@@ -4,8 +4,8 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useRouter } from 'next/navigation'
 import { createContext, useState } from 'react'
 import { auth } from '../../firebase'
-import { IAuthContext } from '../types/AuthContext'
-import { ISignIn } from '../types/SignIn'
+import { IAuthContext } from '@dto/AuthContext'
+import { ISignIn } from '@dto/SignIn'
 
 const AuthenticationContextDefault = {
 	userInfo: null,

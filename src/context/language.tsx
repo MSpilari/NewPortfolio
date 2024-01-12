@@ -1,8 +1,8 @@
 'use client'
 
 import { createContext, useState } from 'react'
-import { IDefaultLanguage, ILanguageProvider } from '../types/LanguageContext'
-import { allLanguages } from '../config/allLanguages'
+import { IDefaultLanguage, ILanguageProvider } from '@dto/LanguageContext'
+import { allLanguages } from '@config/allLanguages'
 
 const defaultLanguage = {
 	language: allLanguages.ptBr,
