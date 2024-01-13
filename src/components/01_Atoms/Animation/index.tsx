@@ -2,10 +2,7 @@
 
 import { HTMLAttributes } from 'react'
 import Lottie from 'react-lottie-player'
-
-type AnimationProps = {
-	animationFile?: object
-}
+import { AnimationProps } from '@dto/Animation'
 
 const Animation: React.FC<AnimationProps & HTMLAttributes<HTMLDivElement>> = ({
 	animationFile,
