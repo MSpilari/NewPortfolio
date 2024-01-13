@@ -1,5 +1,7 @@
+'use client'
+
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { useAuthentication } from '../../../hooks/authenticationHook'
+import { useAuthentication } from '@hooks/authenticationHook'
 
 const defaultState = {
 	email: '',
