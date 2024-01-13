@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 export interface IAllInfo {
 	image: string
 	title: string
@@ -15,4 +17,9 @@ export interface IAdminCard {
 	id: string
 	title: string
 	projectImage: string
+}
+
+export interface IImageInput {
+	allInfo: IAllInfo
+	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
 }
