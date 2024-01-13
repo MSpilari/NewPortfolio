@@ -1,11 +1,6 @@
 import Image from 'next/image'
-import { deleteProject } from '../../../utils/deleteProject'
-
-type IAdminCard = {
-	id: string
-	title: string
-	projectImage: string
-}
+import { deleteProject } from '@utils/deleteProject'
+import { IAdminCard } from '@dto/AddNewProject'
 
 const AdminCard = ({ id, title, projectImage }: IAdminCard) => {
 	return (
