@@ -1,5 +1,5 @@
-import { AddNewProject } from '../../02_Molecules/AddNewProject'
-import { ListDeleteProjects } from '../../02_Molecules/ListDeleteProjects'
+import { AddNewProject } from '@components/02_Molecules/AddNewProject'
+import { ListDeleteProjects } from '@components/02_Molecules/ListDeleteProjects'
 
 const AdminChoices = () => {
 	return (
