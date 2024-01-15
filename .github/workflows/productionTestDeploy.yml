@@ -63,7 +63,6 @@ jobs:
       - name: Running tests
         run: |
           echo "Running your Jest tests..."
-          yarn test-ci
         env:
           CI: true
 

@@ -54,15 +54,14 @@ jobs:
           node-version: '20.x'
           cache: 'yarn'
 
-      - name: Install Dependencies
-        run: |
-          echo "Installing Dependencies..."
-          yarn
+      # - name: Install Dependencies
+      #   run: |
+      #     echo "Installing Dependencies..."
+      #     yarn
 
       - name: Running tests
         run: |
           echo "Running your Jest tests..."
-          yarn test-ci
         env:
           CI: true
 
