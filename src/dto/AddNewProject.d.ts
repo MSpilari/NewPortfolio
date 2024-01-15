@@ -28,3 +28,10 @@ export interface ITitleGitProjectInput {
 	allInfo: IAllInfo
 	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
 }
+
+export interface ISubmitAProject {
+	image: string
+	githubLink: string
+	title: string
+	projectLink: string
+}
