@@ -1,5 +1,5 @@
 import { ChangeEvent, Dispatch, SetStateAction } from 'react'
-import { IAllInfo } from '../components/02_Molecules/AddNewProject'
+import { IAllInfo } from '@dto/AddNewProject'
 
 const inputChanges = (
 	event: ChangeEvent<HTMLInputElement>,

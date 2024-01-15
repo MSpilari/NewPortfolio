@@ -1,13 +1,7 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadString } from 'firebase/storage'
 import { db, storage } from '../../firebase'
-
-interface ISubmitAProject {
-	image: string
-	githubLink: string
-	title: string
-	projectLink: string
-}
+import { ISubmitAProject } from '@dto/AddNewProject'
 
 const SubmitAProject = async ({
 	image,
