@@ -1,7 +1,4 @@
-interface ICard {
-	icon: JSX.Element
-	name: string
-}
+import { ICard } from '@dto/Card'
 
 const Card: React.FC<ICard> = ({ icon, name }) => {
 	return (

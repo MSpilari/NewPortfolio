@@ -1,8 +1,5 @@
 import { AnchorHTMLAttributes } from 'react'
-
-type AnchorProps = {
-	anchorText: JSX.Element | string
-}
+import { AnchorProps } from '@dto/Anchor'
 
 const Anchor: React.FC<
 	AnchorProps & AnchorHTMLAttributes<HTMLAnchorElement>

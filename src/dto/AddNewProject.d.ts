@@ -23,3 +23,8 @@ export interface IImageInput {
 	allInfo: IAllInfo
 	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
 }
+
+export interface ITitleGitProjectInput {
+	allInfo: IAllInfo
+	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
+}
