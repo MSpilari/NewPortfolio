@@ -29,10 +29,10 @@ jobs:
           node-version: '20.x'
           cache: 'yarn'
 
-      - name: Install Dependencies
-        run: |
-          echo "Installing Dependencies..."
-          yarn
+      # - name: Install Dependencies
+      #   run: |
+      #     echo "Installing Dependencies..."
+      #     yarn
 
       - name: Run Linting
         run: |
