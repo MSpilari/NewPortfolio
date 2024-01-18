@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import { AdminChoices } from '@components/03_Organisms/AdminChoices'
 import { useAuthentication } from '@hooks/authenticationHook'
