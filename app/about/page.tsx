@@ -10,16 +10,16 @@ const About = () => {
 	const isDesktop = useMediaQuery({ query: '(min-width:1024px)' })
 
 	return (
-		<div className='flex flex-col h-full relative lg:flex-row lg:w-[calc(100%-80px)]'>
+		<section className='flex flex-col relative lg:overflow-hidden lg:h-full lg:flex-row lg:w-[calc(100%-80px)]'>
 			{isDesktop && (
 				<Animation
 					animationFile={AboutDesktopFile}
-					className='w-full h-[calc(100%-128px)] lg:h-full '
+					className='w-full absolute h-[calc(100%-128px)] lg:h-full '
 				/>
 			)}
 
 			<AboutText />
-		</div>
+		</section>
 	)
 }
 
