@@ -21,16 +21,40 @@ const allLanguages = {
 		Obrigado por visitar meu portfólio, estou entusiasmado para conectar e explorar como podemos colaborar em projetos futuros empolgantes.`,
 
 		SkillsTitle: 'Habilidades & Experiência',
-		SkillsInfo: `Possuo conhecimento tanto no Frontend como no Backend.
-					HTML, CSS, CSS Modules, SASS, Styled Components, TailwindCss, Javascript, Typescript, Node, Next,
-					Python, Google Cloud Platform.
-					Trabalhando como freelancer, sozinho ou em squads.
-					Construindo pequenas, médias e grandes aplicações para a Web, principalmente com
-					React, Kanban, utilizando também animações, layouts interativos com o conceito
-					Mobile first, Single Page Application(SPA) e Design Responsivo.
-					Também possuo uma experiência no Backend, com NodeJs, construindo APIs no padrão
-					RESTful/REST, utilizando Express, autenticação JWT, OAuth2.0, DBs como PostgreSQL, MongoDB, Firebase.
-					Visite meu Linkedin para entrar em contato.`,
+		SkillsInfo: [
+			{
+				title: 'Linguagens',
+				text: `Como Engenheiro de Software, trago uma sólida experiência tanto no desenvolvimento Frontend quanto Backend, demonstrando habilidades especializadas e uma abordagem orientada a resultados. Contribuição para o desenvolvimento de projetos de pequena, média e grande escala, aplicando metodologias ágeis, como Kanban, para maximizar a eficiência.`,
+				category: 'languages'
+			},
+			{
+				title: 'Front End',
+				text: `4+ anos de experiência em React, NextJs e Angular 
+				
+				Proficiência em construir interfaces web responsivas, priorizando o conceito Mobile First e seguindo as melhores práticas de Single Page Applications (SPAs).
+							
+				Experiência em desenvolver aplicações web dinâmicas e interativas, incorporando animações e layouts inovadores.`,
+				category: 'frontend'
+			},
+			{
+				title: 'Back End',
+				text: `3+ anos de experiência em NodeJs e Java para a construção de APIs no padrão RESTful/REST, utilizando Express, NestJs, SpringBoot.
+				
+				Implementação de práticas avançadas de autenticação, incluindo JWT e OAuth2.0.
+				
+				Profundo conhecimento em bancos de dados como PostgreSQL, MongoDB e Firebase, garantindo eficiência e segurança nas operações.`,
+				category: 'backend'
+			},
+			{
+				title: 'Testes',
+				text: `Experiência sólida em implementação de testes unitários, integração e E2E utilizando Jest e Cypress.
+
+				Proficiência na criação de testes automatizados robustos para garantir a qualidade e a estabilidade do código em todas as fases do desenvolvimento.
+				
+				Implementação de estratégias abrangentes de teste, abordando tanto o frontend quanto o backend, para assegurar a confiabilidade e o desempenho de sistemas complexos.`,
+				category: 'tests'
+			}
+		],
 		ProjectsTitle: 'Projetos',
 		ContactTitle: 'Me Contate !'
 	},
@@ -56,16 +80,40 @@ const allLanguages = {
 		Thank you for visiting my portfolio; I am excited to connect and explore how we can collaborate on exciting future projects.
 		`,
 		SkillsTitle: 'Skills & Experience',
-		SkillsInfo: `I have knowledge in both Frontend and Backend.
-			HTML, CSS, CSS Modules, SASS, Styled Components, TailwindCss, Javascript, Typescript, Node, Next,
-			Python, Google Cloud Platform.
-			Working as a freelancer, alone or in squads.
-			Building small, medium and large applications for the Web, mainly with
-			React, Kanban, also using animations, interactive layouts with the concept
-			Mobile first, Single Page Application(SPA) and Responsive Design.
-			I also have an experience in the Backend, with NodeJs, building APIs in the pattern
-			RESTful/REST, using Express, JWT authentication, OAuth2.0, DBs like PostgreSQL, MongoDB, Firebase.
-			Visit my Linkedin to get in touch.`,
+		SkillsInfo: [
+			{
+				title: 'Languages',
+				text: `As a Software Engineer, I bring a robust experience in both Frontend and Backend development, showcasing specialized skills and a results-oriented approach. I have contributed to the development of projects of small, medium, and large scales, applying agile methodologies such as Kanban to maximize efficiency.`,
+				category: 'languages'
+			},
+			{
+				title: 'Front End',
+				text: `4+ years of experience in React, Next.js, and Angular.
+
+				Proficiency in building responsive web interfaces, prioritizing the Mobile First concept, and following best practices for Single Page Applications (SPAs).
+				
+				Experience in developing dynamic and interactive web applications, incorporating animations and innovative layouts.`,
+				category: 'frontend'
+			},
+			{
+				title: 'Back End',
+				text: `3+ years of experience in Node.js and Java for building APIs following the RESTful/REST pattern, using Express, Nest.js, and Spring Boot.
+
+				Implementation of advanced authentication practices, including JWT and OAuth 2.0.
+				
+				In-depth knowledge of databases such as PostgreSQL, MongoDB, and Firebase, ensuring efficiency and security in operations.`,
+				category: 'backend'
+			},
+			{
+				title: 'Tests',
+				text: `Solid experience in implementing unit, integration, and E2E tests using Jest and Cypress.
+
+				Proficiency in creating robust automated tests to ensure code quality and stability throughout all stages of development.
+				
+				Implementation of comprehensive testing strategies, addressing both frontend and backend, to ensure reliability and performance of complex systems.`,
+				category: 'tests'
+			}
+		],
 		ProjectsTitle: 'Projects',
 		ContactTitle: 'Contact Me !'
 	}
