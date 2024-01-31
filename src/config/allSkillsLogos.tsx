@@ -1,35 +1,44 @@
-import { AiOutlineHtml5 } from 'react-icons/ai'
-import { IoLogoCss3, IoLogoJavascript, IoLogoNodejs } from 'react-icons/io'
+import { FaJava } from 'react-icons/fa'
+import { IoLogoNodejs, IoLogoAngular } from 'react-icons/io'
 import {
 	SiTypescript,
 	SiPython,
-	SiStyledcomponents,
-	SiTailwindcss,
 	SiReact,
 	SiNextdotjs,
 	SiFirebase,
 	SiPostgresql,
 	SiMongodb,
-	SiExpress,
-	SiDocker
+	SiDocker,
+	SiSpringboot,
+	SiJest,
+	SiCypress,
+	SiNestjs
 } from 'react-icons/si'
 
-const allLogos = [
-	{ icon: <SiReact />, name: 'ReactJs' },
-	{ icon: <AiOutlineHtml5 />, name: 'HTML' },
-	{ icon: <IoLogoCss3 />, name: 'CSS' },
-	{ icon: <SiStyledcomponents />, name: 'Styled-Components' },
-	{ icon: <SiTailwindcss />, name: 'TailwindCss' },
-	{ icon: <IoLogoJavascript />, name: 'Javascript' },
-	{ icon: <SiPython />, name: 'Python' },
-	{ icon: <SiTypescript />, name: 'Typescript' },
-	{ icon: <SiNextdotjs />, name: 'NextJs' },
-	{ icon: <SiDocker />, name: 'Docker' },
-	{ icon: <IoLogoNodejs />, name: 'NodeJs' },
-	{ icon: <SiExpress />, name: 'Express' },
-	{ icon: <SiFirebase />, name: 'Firebase' },
-	{ icon: <SiPostgresql />, name: 'Postgresql' },
-	{ icon: <SiMongodb />, name: 'MongoDb' }
-]
+const allLogos = {
+	frontend: [
+		{ icon: <SiNextdotjs />, name: 'NextJs' },
+		{ icon: <SiReact />, name: 'ReactJs' },
+		{ icon: <IoLogoAngular />, name: 'Angular' }
+	],
+	backend: [
+		{ icon: <SiNestjs />, name: 'NestJs' },
+		{ icon: <IoLogoNodejs />, name: 'NodeJs' },
+		{ icon: <SiSpringboot />, name: 'Springboot' },
+		{ icon: <SiDocker />, name: 'Docker' },
+		{ icon: <SiFirebase />, name: 'Firebase' },
+		{ icon: <SiPostgresql />, name: 'Postgresql' },
+		{ icon: <SiMongodb />, name: 'MongoDb' }
+	],
+	tests: [
+		{ icon: <SiJest />, name: 'Jest' },
+		{ icon: <SiCypress />, name: 'Cypress' }
+	],
+	languages: [
+		{ icon: <SiTypescript />, name: 'Typescript' },
+		{ icon: <FaJava />, name: 'Java' },
+		{ icon: <SiPython />, name: 'Python' }
+	]
+}
 
 export { allLogos }
