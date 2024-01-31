@@ -4,7 +4,7 @@ const AboutText: React.FC = () => {
 	const { language } = useLanguage()
 
 	return (
-		<div
+		<section
 			className='w-full h-full mx-auto z-0 bg-[rgba(0,0,0,0.8)] mb-12 mt-1 text-white flex flex-col items-center gap-2 justify-center
 		lg:gap-0 lg:mx-0 lg:mb-0'
 		>
@@ -12,12 +12,12 @@ const AboutText: React.FC = () => {
 				{language.AboutTitle}
 			</h1>
 
-			<section className='text-lg text-center mx-2 lg:ml-4'>
+			<ul className='text-lg mx-2 lg:ml-4 flex flex-col '>
 				{language.AboutInfo.split('\n').map((paragraph, index) => (
-					<p key={index}>{paragraph.trim()}</p>
+					<li key={index}>{paragraph.trim()}</li>
 				))}
-			</section>
-		</div>
+			</ul>
+		</section>
 	)
 }
 
