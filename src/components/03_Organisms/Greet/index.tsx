@@ -1,4 +1,4 @@
-import { useLanguage } from '../../../hooks/languageHook'
+import { useLanguage } from '@hooks/languageHook'
 
 const Greet: React.FC = () => {
 	const { language } = useLanguage()

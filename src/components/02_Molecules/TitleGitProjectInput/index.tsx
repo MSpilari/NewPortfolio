@@ -1,11 +1,7 @@
-import { Dispatch, FC, SetStateAction } from 'react'
-import { inputChanges } from '../../../utils/inputChanges'
-import { IAllInfo } from '../../02_Molecules/AddNewProject'
+import { FC } from 'react'
 
-interface ITitleGitProjectInput {
-	allInfo: IAllInfo
-	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
-}
+import { inputChanges } from '@utils/inputChanges'
+import { ITitleGitProjectInput } from '@dto/AddNewProject'
 
 const TitleGitProjectInput: FC<ITitleGitProjectInput> = ({
 	allInfo,

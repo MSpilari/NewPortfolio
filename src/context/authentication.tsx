@@ -1,34 +1,49 @@
+'use client'
+
 import { signInWithEmailAndPassword } from 'firebase/auth'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { createContext, useState } from 'react'
 import { auth } from '../../firebase'
-
-interface ISignIn {
-	email: string
-	password: string
-}
+import { IAuthContext, AuthenticationProviderProps } from '@dto/AuthContext'
+import { ISignIn } from '@dto/SignIn'
 
 const AuthenticationContextDefault = {
 	userInfo: null,
-	signIn: (props: ISignIn): any => {},
+	signIn: async (props: ISignIn): Promise<string | boolean | null> => {
+		try {
+			const credentials = await signInWithEmailAndPassword(
+				auth,
+				props.email,
+				props.password
+			)
+
+			return credentials.user.accessToken
+		} catch (error) {
+			return false
+		}
+	},
 	signOut: () => {}
 }
 
-const AuthenticationContext = createContext(AuthenticationContextDefault)
+const AuthenticationContext = createContext<IAuthContext>(
+	AuthenticationContextDefault
+)
 
-const AuthenticationProvider = ({ children }) => {
-	const [userInfo, setUserInfo] = useState(null)
+const AuthenticationProvider: React.FC<AuthenticationProviderProps> = ({
+	children
+}) => {
+	const [userInfo, setUserInfo] = useState<string | boolean | null>(null)
 	const { push } = useRouter()
 
-	const signIn = async ({ email, password }) => {
-		const credentials = await signInWithEmailAndPassword(auth, email, password)
-			.then(credentials => credentials)
-			.catch(() => null)
+	const signIn = async ({ email, password }: ISignIn) => {
+		const token = await AuthenticationContextDefault.signIn({ email, password })
 
-		if (credentials && credentials.user.accessToken) {
-			setUserInfo(credentials.user.accessToken)
+		if (token) {
+			setUserInfo(token)
 			return push('/addProject')
 		}
+
+		return setUserInfo(token)
 	}
 
 	const signOut = () => setUserInfo(null)

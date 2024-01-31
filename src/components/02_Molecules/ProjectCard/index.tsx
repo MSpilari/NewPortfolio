@@ -1,14 +1,8 @@
 import { BsGithub, BsEyeFill } from 'react-icons/bs'
 import Image from 'next/image'
 
-import { Button } from '../../01_Atoms/Button'
-
-interface IProject {
-	image: string
-	prjLink: string
-	title: string
-	gitLink: string
-}
+import { Button } from '@components/01_Atoms/Button'
+import { IProject } from '@dto/ProjectCard'
 
 const ProjectCard = ({ image, prjLink, title, gitLink }: IProject) => {
 	return (

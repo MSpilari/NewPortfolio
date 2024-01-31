@@ -10,14 +10,17 @@
 		"test-ci": "jest"
 	},
 	"dependencies": {
-		"firebase": "^9.8.4",
-		"next": "^12.1.6",
-		"react": "^18.1.0",
-		"react-dom": "^18.1.0",
+		"@hookform/resolvers": "^3.3.4",
+		"firebase": "^10.7.1",
+		"next": "^14.0.4",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.49.3",
 		"react-icons": "^4.3.1",
 		"react-lottie-player": "^1.4.3",
 		"react-responsive": "^9.0.0",
-		"vercel": "^28.2.0"
+		"vercel": "^28.2.0",
+		"zod": "^3.22.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.16.10",

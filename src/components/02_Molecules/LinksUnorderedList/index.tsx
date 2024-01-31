@@ -1,12 +1,12 @@
 import { GiBrazilFlag, GiUsaFlag } from 'react-icons/gi'
 import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai'
 
-import { Anchor } from '../../01_Atoms/Anchor'
-import { Button } from '../../01_Atoms/Button'
-import { ListItem } from '../../01_Atoms/ListItem'
+import { Anchor } from '@components/01_Atoms/Anchor'
+import { Button } from '@components/01_Atoms/Button'
+import { ListItem } from '@components/01_Atoms/ListItem'
 
-import { allLanguages } from '../../../config/allLanguages'
-import { useLanguage } from '../../../hooks/languageHook'
+import { allLanguages } from '@config/allLanguages'
+import { useLanguage } from '@hooks/languageHook'
 
 const LinksUnorderedList = () => {
 	const { language, setLanguage } = useLanguage()

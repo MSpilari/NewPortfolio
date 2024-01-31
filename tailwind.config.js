@@ -3,6 +3,8 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
 	mode: 'jit',
 	content: [
+		'./app/**/*.{js,ts,jsx,tsx}',
+		'./app/*.{js,ts,jsx,tsx}',
 		'./pages/**/*.{js,ts,jsx,tsx}',
 		'./pages/*.{js,ts,jsx,tsx}',
 		'./src/components/**/*.{js,ts,jsx,tsx}',
@@ -17,8 +19,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				theNautigal: ['The Nautigal', 'cursive'],
-				pushster: ['Pushster', 'cursive']
+				theNautigal: ['var(--font-the-nautigal)'],
+				lobster: ['var(--font-lobster)']
 			},
 			keyframes: {
 				XFtransition: {

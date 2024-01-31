@@ -1,17 +1,12 @@
 import Image from 'next/image'
-import { deleteProject } from '../../../utils/deleteProject'
-
-type IAdminCard = {
-	id: string
-	title: string
-	projectImage: string
-}
+import { deleteProject } from '@utils/deleteProject'
+import { IAdminCard } from '@dto/AddNewProject'
 
 const AdminCard = ({ id, title, projectImage }: IAdminCard) => {
 	return (
 		<li
 			className='w-[60%] mx-auto my-1 h-28 text-white flex items-center justify-between 
-      font-pushster border-2 border-yellow-300 rounded-lg overflow-hidden'
+      border-2 border-yellow-300 rounded-lg overflow-hidden'
 			key={id}
 		>
 			{projectImage && (
@@ -21,6 +16,7 @@ const AdminCard = ({ id, title, projectImage }: IAdminCard) => {
 						objectFit='cover'
 						layout='fill'
 						src={projectImage}
+						alt='Projects Pic'
 					/>
 				</div>
 			)}

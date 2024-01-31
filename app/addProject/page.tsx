@@ -1,7 +1,9 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import { AdminChoices } from '../src/components/03_Organisms/AdminChoices'
-import { useAuthentication } from '../src/hooks/authenticationHook'
+import { AdminChoices } from '@components/03_Organisms/AdminChoices'
+import { useAuthentication } from '@hooks/authenticationHook'
 
 const AddProject = () => {
 	const { userInfo } = useAuthentication()
@@ -12,9 +14,9 @@ const AddProject = () => {
 	}, [])
 
 	return (
-		<div className='w-full h-full flex flex-col'>
+		<section className='w-full h-full flex flex-col'>
 			{userInfo ? <AdminChoices /> : <p className='text-white'>Redirect...</p>}
-		</div>
+		</section>
 	)
 }
 

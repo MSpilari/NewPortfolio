@@ -1,14 +1,8 @@
 import { useState } from 'react'
-import { ImageInput } from '../../02_Molecules/ImageInput'
-import { TitleGitProjectInput } from '../../02_Molecules/TitleGitProjectInput'
-import { SubmitAProject } from '../../../utils/SubmitAProject'
-
-export interface IAllInfo {
-	image: string
-	title: string
-	githubLink: string
-	projectLink: string
-}
+import { ImageInput } from '@components/02_Molecules/ImageInput'
+import { TitleGitProjectInput } from '@components/02_Molecules/TitleGitProjectInput'
+import { SubmitAProject } from '@utils/SubmitAProject'
+import { IAllInfo } from '@dto/AddNewProject'
 
 const defaultState = {
 	image: '',
@@ -23,7 +17,7 @@ const AddNewProject = () => {
 	const { image, githubLink, title, projectLink } = allInfo
 
 	return (
-		<div className='w-full h-full mx-auto z-10 text-white flex flex-col items-center font-pushster justify-center lg:w-full lg:h-full'>
+		<div className='w-full h-full mx-auto z-10 text-white flex flex-col items-center justify-center lg:w-full lg:h-full'>
 			<h1 className='text-2xl text-yellow-500 mb-3'>Add a new project</h1>
 
 			<form

@@ -1,5 +1,5 @@
-import { CarouselSlider } from '../../02_Molecules/CarouselSlider'
-import { CarouselWrapper } from '../../04_Templates/CarouselWrapper'
+import { CarouselSlider } from '@components/02_Molecules/CarouselSlider'
+import { CarouselWrapper } from '@components/04_Templates/CarouselWrapper'
 
 type ProjectsCarousel = {
 	projectsInfo: []

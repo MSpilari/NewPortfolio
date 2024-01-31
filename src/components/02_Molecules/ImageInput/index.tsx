@@ -1,12 +1,7 @@
-import { Dispatch, FC, SetStateAction, useRef } from 'react'
+import { FC, useRef } from 'react'
 import { BsFillCameraFill } from 'react-icons/bs'
-import { imageToDataUrl } from '../../../utils/imageToDataUrl'
-import { IAllInfo } from '../../02_Molecules/AddNewProject'
-
-interface IImageInput {
-	allInfo: IAllInfo
-	setAllInfo: Dispatch<SetStateAction<IAllInfo>>
-}
+import { IImageInput } from '@dto/AddNewProject'
+import { imageToDataUrl } from '@utils/imageToDataUrl'
 
 const ImageInput: FC<IImageInput> = ({ allInfo, setAllInfo }) => {
 	const inputFileRef = useRef<HTMLInputElement>(null)

@@ -1,9 +1,5 @@
 import { ButtonHTMLAttributes } from 'react'
-
-type ButtonProps = {
-	iconLabel: JSX.Element | string
-	animationText?: JSX.Element | string
-}
+import { ButtonProps } from '@dto/Button'
 
 const Button: React.FC<
 	ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>

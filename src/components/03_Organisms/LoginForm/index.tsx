@@ -1,61 +1,68 @@
-import { ChangeEvent, FormEvent, useState } from 'react'
-import { useAuthentication } from '../../../hooks/authenticationHook'
+'use client'
 
-const defaultState = {
-	email: '',
-	password: ''
-}
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useAuthentication } from '@hooks/authenticationHook'
+
+const formSchema = z.object({
+	email: z.string().min(1, 'Email is required !'),
+	password: z.string().min(1, 'Password is required !')
+})
+
+type FormType = z.infer<typeof formSchema>
 
 const LoginForm = () => {
-	const { signIn } = useAuthentication()
-	const [allValues, setAllValues] = useState(defaultState)
+	const { signIn, userInfo } = useAuthentication()
+	const {
+		formState: { errors },
+		handleSubmit,
+		register,
+		reset
+	} = useForm<FormType>({ resolver: zodResolver(formSchema) })
 
-	const formSubmitted = (e: FormEvent) => {
-		e.preventDefault()
-		return signIn(allValues)
-	}
-
-	const inputChanges = (e: ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target
-		return setAllValues(prevState => ({
-			...prevState,
-			[name]: value
-		}))
+	const formSubmitted = async (data: FormType) => {
+		signIn(data)
+		reset()
 	}
 
 	return (
-		<div className='w-full h-full mx-auto z-10 text-white flex flex-col items-center font-pushster justify-center bg-[rgba(0,0,0,0.5)] lg:w-full lg:h-full '>
+		<div className='w-full h-full mx-auto z-10 text-white flex flex-col items-center justify-center bg-[rgba(0,0,0,0.5)] lg:w-full lg:h-full '>
 			<h1 className='text-2xl text-yellow-500 mb-3'>Login</h1>
-
+			{userInfo === false && (
+				<span className='text-red-600'>
+					{' '}
+					Unauthorized ! Email/Password incorrect
+				</span>
+			)}
 			<form
-				onSubmit={e => formSubmitted(e)}
+				onSubmit={handleSubmit(formSubmitted)}
 				className='flex flex-col items-center w-[90%] mx-auto'
 			>
 				<label className='flex mt-2' htmlFor='email'>
 					<span className='text-lg mx-1'>Email:</span>
 
 					<input
-						className='text-lg w-full bg-transparent border-2 rounded-md outline-none'
-						type='email'
-						name='email'
-						onChange={e => inputChanges(e)}
-						value={allValues.email}
-						placeholder='Your e-mail...'
+						className={`text-lg w-full bg-transparent border-2 rounded-md outline-none ${
+							errors.email && 'border-red-600'
+						}`}
+						{...register('email')}
 					/>
 				</label>
+				{errors.email && <span>{errors.email.message}</span>}
 
 				<label className='flex text-lg mt-2 ' htmlFor='password'>
 					<span className='text-lg mx-1'>Password:</span>
 
 					<input
-						className='text-lg w-full bg-transparent border-2 rounded-md outline-none'
+						className={`text-lg w-full bg-transparent border-2 rounded-md outline-none ${
+							errors.password && 'border-red-600'
+						}`}
 						type='password'
-						name='password'
-						onChange={e => inputChanges(e)}
-						value={allValues.password}
-						placeholder='Your password...'
+						{...register('password')}
 					/>
 				</label>
+				{errors.password && <span>{errors.password.message}</span>}
 
 				<button
 					className='px-10 py-2 my-7 border-2 border-white text-xl rounded-lg 
