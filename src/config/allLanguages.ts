@@ -8,17 +8,17 @@ const allLanguages = {
 		ButtonLabel: 'Entrar em contato !',
 		ButtonMessageLabel: 'Enviar Mensagem !',
 		AboutTitle: 'Sobre Mim',
-		AboutInfo: `Olá, eu sou Matheus B. Spilari, um Engenheiro de Software com expertise em uma variedade de linguagens e tecnologias. Minha jornada profissional foi marcada por desafios empolgantes e projetos inovadores, impulsionados pelo meu comprometimento com a excelência técnica e a busca incessante pela melhoria contínua. 
-
-		Com uma sólida base em linguagens como TypeScript, Java e Python, e fluência em frameworks como NextJs, NestJs, e tecnologias como Docker, Node, SpringBoot, React, Angular, MongoDb e PostgreSQL, tenho liderado o desenvolvimento de soluções robustas e escaláveis.
+		AboutInfo: `Olá, eu sou Matheus B. Spilari, um Engenheiro de Software com expertise em uma variedade de linguagens e tecnologias.
+		
+		Minha jornada profissional foi marcada por desafios empolgantes e projetos inovadores, impulsionados pelo meu comprometimento com a excelência técnica e a busca incessante pela melhoria contínua. Com uma sólida base em linguagens como TypeScript, Java e Python, e fluência em frameworks como NextJs, NestJs, e tecnologias como Docker, Node, SpringBoot, React, Angular, MongoDb e PostgreSQL, tenho liderado o desenvolvimento de soluções robustas e escaláveis.
 		
 		Ao longo dos anos, participei ativamente em projetos significativos, desde a concepção até a implementação, destacando-me na resolução de problemas complexos e na entrega de resultados de alta qualidade. Meu trabalho envolve tanto o backend quanto o frontend, com uma abordagem abrangente que abraça as melhores práticas da indústria e um foco na usabilidade e experiência do usuário.
 		
-		Além da minha experiência técnica, valorizo a colaboração eficaz em equipes multidisciplinares. Acredito que a inovação floresce em ambientes onde as ideias são compartilhadas e desafiadas, e busco sempre contribuir para um ambiente de trabalho positivo e estimulante.
+		Além da minha experiência técnica, valorizo a colaboração eficaz em equipes multidisciplinares. Acredito que a inovação floresce em ambientes onde as ideias são compartilhadas e desafiadas.
 		
-		Seja em arquitetar sistemas escaláveis, otimizar o desempenho de aplicativos ou explorar novas tecnologias, estou constantemente em busca de oportunidades que me permitam aplicar minha habilidade em criar soluções impactantes. Explore meu portfólio para uma visão mais detalhada dos projetos nos quais estive envolvido e como minha abordagem pode agregar valor ao seu próximo desafio.
+		Possuo conhecimento em arquitetar sistemas escaláveis, otimizar o desempenho de aplicativos ou explorar novas tecnologias, estou constantemente em busca de oportunidades que me permitam aplicar minha habilidade em criar soluções impactantes. 
 		
-		Obrigado por visitar meu portfólio, estou entusiasmado para conectar e explorar como podemos colaborar em projetos futuros empolgantes.`,
+		Explore meu portfólio para uma visão mais detalhada dos projetos nos quais estive envolvido e como minha abordagem pode agregar valor ao seu próximo desafio.`,
 
 		SkillsTitle: 'Habilidades & Experiência',
 		SkillsInfo: [
@@ -67,17 +67,17 @@ const allLanguages = {
 		ButtonLabel: 'Contact Me !',
 		ButtonMessageLabel: 'Send a Message !',
 		AboutTitle: 'About Me',
-		AboutInfo: `Hello, I am Matheus B. Spilari, a Software Engineer with expertise in a variety of languages and technologies. My professional journey has been marked by exciting challenges and innovative projects, driven by my commitment to technical excellence and a relentless pursuit of continuous improvement.
+		AboutInfo: `Hello, I'm Matheus B. Spilari, a Software Engineer with expertise in a variety of languages and technologies.
 
-		With a solid foundation in languages such as TypeScript, Java, and Python, and proficiency in frameworks like NextJs, NestJs, and technologies such as Docker, Node, SpringBoot, React, Angular, MongoDb, and PostgreSQL, I have been leading the development of robust and scalable solutions.
+		My professional journey has been marked by exciting challenges and innovative projects, driven by my commitment to technical excellence and a relentless pursuit of continuous improvement. With a solid foundation in languages such as TypeScript, Java, and Python, and proficiency in frameworks like Next.js, Nest.js, along with technologies including Docker, Node.js, Spring Boot, React, Angular, MongoDB, and PostgreSQL, I have led the development of robust and scalable solutions.
 		
-		Over the years, I have actively participated in significant projects, from conception to implementation, distinguishing myself in solving complex problems and delivering high-quality results. My work spans both backend and frontend, with a comprehensive approach that embraces industry best practices and a focus on usability and user experience.
+		Throughout the years, I have actively participated in significant projects from conception to implementation, excelling in solving complex problems and delivering high-quality results. My work encompasses both backend and frontend development, with a comprehensive approach that embraces industry best practices and a focus on usability and user experience.
 		
-		Beyond my technical experience, I value effective collaboration in multidisciplinary teams. I believe that innovation flourishes in environments where ideas are shared and challenged, and I always strive to contribute to a positive and stimulating work environment.
+		Beyond my technical expertise, I value effective collaboration in multidisciplinary teams. I believe that innovation thrives in environments where ideas are shared and challenged.
 		
-		Whether it's architecting scalable systems, optimizing application performance, or exploring new technologies, I am constantly seeking opportunities to apply my skills in creating impactful solutions. Explore my portfolio for a more detailed view of the projects I've been involved in and how my approach can add value to your next challenge.
+		With knowledge in architecting scalable systems, optimizing application performance, and exploring new technologies, I am constantly seeking opportunities that allow me to apply my skills in creating impactful solutions.
 		
-		Thank you for visiting my portfolio; I am excited to connect and explore how we can collaborate on exciting future projects.
+		Explore my portfolio for a more detailed view of the projects I've been involved in and how my approach can add value to your next challenge.
 		`,
 		SkillsTitle: 'Skills & Experience',
 		SkillsInfo: [
