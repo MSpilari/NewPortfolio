@@ -15,14 +15,16 @@ interface ILanguage {
 	AboutTitle: string
 	AboutInfo: string
 	SkillsTitle: string
-	SkillsInfo: string
+	SkillsInfo: { title: string; text: string; category: string }[]
 	ProjectsTitle: string
 	ContactTitle: string
 }
+
+type allLogosCategory = 'frontend' | 'backend' | 'tests' | 'languages'
 
 interface IDefaultLanguage {
 	language: ILanguage
 	setLanguage: Dispatch<SetStateAction<ILanguage>>
 }
 
-export { IDefaultLanguage, ILanguageProvider }
+export { IDefaultLanguage, ILanguageProvider, allLogosCategory }
