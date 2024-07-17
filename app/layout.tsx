@@ -1,39 +1,34 @@
-import '../src/styles/globals.css'
-import { Metadata } from 'next'
-import { lobster, theNautigal } from '@config/fonts'
-import { AuthenticationProvider } from '@context/authentication'
-import { LanguageProvider } from '@context/language'
-import { Header } from '@components/03_Organisms/Header'
+import React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+import { ThemeProvider } from "../src/providers/ThemeProvider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: 'MSpilari | Fullstack Developer',
-	description:
-		'Matheus Bernardes Spilari, MSpilari, FullStack Developer, portfólio.'
-}
+  title: "MSpilari | Software Engineer",
+  description: "Portfolio from MSpilari software engineer",
+};
 
 export default function RootLayout({
-	children
-}: {
-	children: React.ReactNode
-}) {
-	return (
-		<html
-			lang='en'
-			className={`${lobster.variable} ${theNautigal.variable} font-lobster`}
-		>
-			<link rel='icon' href='/Logo.png' />
-
-			<AuthenticationProvider>
-				<LanguageProvider>
-					<body>
-						<div className='w-screen h-screen lg:flex'>
-							<Header />
-
-							{children}
-						</div>
-					</body>
-				</LanguageProvider>
-			</AuthenticationProvider>
-		</html>
-	)
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

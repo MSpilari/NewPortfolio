@@ -1,25 +1,30 @@
-'use client'
+import React from "react";
+import { Hero } from "../src/components/Hero/Hero";
+import { FloatingNav } from "../src/ui/FloatingNav";
+import { Grid } from "../src/components/Grid/Grid";
+import { Projects } from "../src/components/Projects/Projects";
+import { navItems } from "../src/data";
+import { Clients } from "../src/components/Clients/Clients";
+import { Experience } from "../src/components/Experience/Experience";
+import { Article } from "../src/components/Article/Article";
+import { Footer } from "../src/components/Footer/Footer";
 
-import { useMediaQuery } from 'react-responsive'
-
-import AnimationDesktopFile from '@assets/indexAnimationDesktop.json'
-import AnimationMobileFile from '@assets/indexAnimationMobile.json'
-
-import { Animation } from '@components/01_Atoms/Animation'
-import { Greet } from '@components/03_Organisms/Greet'
-
-const HomePage = () => {
-	const isMobile = useMediaQuery({ query: '(max-width:768px)' })
-
-	return (
-		<div className='flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full '>
-			<Animation
-				animationFile={isMobile ? AnimationMobileFile : AnimationDesktopFile}
-				className='w-full h-full'
-			/>
-			<Greet />
-		</div>
-	)
+export default function Home() {
+  return (
+    <main
+      className="relative bg-black-100 flex justify-center 
+    items-center flex-col overflow-hidden mx-auto sm:px-10 px-5"
+    >
+      <div className="max-w-7xl w-full">
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <Grid />
+        <Projects />
+        {/* <Clients /> */}
+        <Experience />
+        <Article />
+        <Footer />
+      </div>
+    </main>
+  );
 }
-
-export default HomePage

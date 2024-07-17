@@ -1,39 +1,37 @@
 {
-	"name": "newportfolio",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "set NODE_ENV=development&&next dev",
-		"build": "next build",
-		"start": "next start",
-		"test-local": "jest --watchAll",
-		"test-ci": "jest"
-	},
-	"dependencies": {
-		"@hookform/resolvers": "^3.3.4",
-		"firebase": "^10.7.1",
-		"next": "^14.0.4",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-hook-form": "^7.49.3",
-		"react-icons": "^4.3.1",
-		"react-lottie-player": "^1.4.3",
-		"react-responsive": "^9.0.0",
-		"vercel": "^28.2.0",
-		"zod": "^3.22.4"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.16.10",
-		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^13.3.0",
-		"@types/react": "^18.0.12",
-		"autoprefixer": "^10.4.2",
-		"jest": "^28.1.1",
-		"jest-environment-jsdom": "^28.1.0",
-		"next-router-mock": "^0.7.4",
-		"postcss": "^8.4.5",
-		"tailwindcss": "^3.0.15",
-		"ts-node": "^10.8.1",
-		"typescript": "^4.5.4"
-	}
+  "name": "newportfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.108.3",
+    "@react-three/fiber": "^8.16.8",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.2",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.2.5",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-lottie": "^1.2.4",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.166.1",
+    "three-globe": "^2.31.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-lottie": "^1.2.10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
 }
