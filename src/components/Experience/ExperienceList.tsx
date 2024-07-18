@@ -8,6 +8,7 @@ const ExperienceList: React.FC<ExperienceListDTO> = ({ workExperience }) => {
       {workExperience.map(({ id, thumbnail, title, desc }) => {
         return (
           <ExperienceCard
+            key={id}
             id={id}
             desc={desc}
             thumbnail={thumbnail}
