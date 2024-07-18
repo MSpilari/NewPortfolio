@@ -1,13 +1,9 @@
 "use client";
+import { cn } from "../../../lib/utils";
 import { BackgroundGradientAnimation } from "../../../ui/GradientBg";
 import { GlobeDemo } from "../../../ui/GridGlobe";
-import Lottie from "react-lottie";
-import { useState } from "react";
-import animationData from "../../../data/confetti.json";
-import { BorderMagicButton } from "../../../ui/BorderMagicButton";
-import { IoCopyOutline } from "react-icons/io5";
+import { ContactCard } from "../ContactCard";
 import { BentoGridItemDTO } from "../model/BentoGrid";
-import { cn } from "../../../lib/utils";
 import { TechStackCard } from "../TechStackCard";
 
 export const BentoGridItem = ({
@@ -22,22 +18,6 @@ export const BentoGridItem = ({
   titleClassName,
   spareImg,
 }: BentoGridItemDTO) => {
-  const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
   return (
     <div
       className={cn(
@@ -98,24 +78,7 @@ export const BentoGridItem = ({
 
           {id === 3 && <TechStackCard />}
 
-          {id === 6 && (
-            <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${
-                  copied ? "block" : "block"
-                }`}
-              >
-                <Lottie options={defaultOptions} height={200} width={400} />
-              </div>
-              <BorderMagicButton
-                title={copied ? "Email copied" : "Copy my email"}
-                icon={<IoCopyOutline />}
-                position="left"
-                otherClasses="!bg-[#161A31]"
-                handleClick={handleCopy}
-              />
-            </div>
-          )}
+          {id === 6 && <ContactCard />}
         </div>
       </div>
     </div>
