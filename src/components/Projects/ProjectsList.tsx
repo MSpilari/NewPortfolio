@@ -1,8 +1,7 @@
 import React from "react";
+import { wordToIcon } from "../../utils/wordToIcon";
 import { ProjectsCard } from "./ProjectsCard";
 import { ProjectListDTO } from "./model/Projects";
-import { wordToIcon } from "../../utils/wordToIcon";
-import { IconType } from "react-icons";
 
 const ProjectsList: React.FC<ProjectListDTO> = ({ projects }) => {
   return (
@@ -18,6 +17,7 @@ const ProjectsList: React.FC<ProjectListDTO> = ({ projects }) => {
             img={img}
             link={link}
             title={title}
+            key={id}
           />
         );
       })}
