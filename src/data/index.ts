@@ -1,14 +1,15 @@
 const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Articles", link: "#articles" },
   { name: "Contact", link: "#contact" },
 ];
 
 const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title:
+      "DevOps enthusiast, automating processes and improving continuous delivery.",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -38,7 +39,8 @@ const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title:
+      "Innovative in technology, always looking for new ways to solve problems.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -49,8 +51,9 @@ const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "Currently working as a FullStack Developer",
+    description:
+      "Working on projects using Spring boot, Angular and MySQL, as well as Node, React and MongoDB",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -173,29 +176,29 @@ const companies = [
 const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Engineer - WaveLine Creative",
+    desc: "I worked as a Frontend Engineer, developing dynamic and responsive user interfaces using React and Angular.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Backend Engineer - ByteCraft Innovations",
+    desc: "Implementing new features, optimizing queries in relational and NoSQL databases, and resolving critical bugs that affected system stability.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Freelance Web Dev",
+    desc: "I worked as a Freelance Web Developer, creating personalized websites and complete web solutions for several clients.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Fullstack Developer",
+    desc: "I worked as a Fullstack Developer, designing and implementing complete solutions that range from the dynamic frontend to the robust backend, ensuring scalable and integrated functionalities.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
