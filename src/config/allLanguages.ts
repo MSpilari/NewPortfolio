@@ -11,22 +11,22 @@ const allLanguages = {
     Experience: [
       {
         expImg: "/exp1.svg",
-        expDate: "2012 -> 2014",
+        expDate: "2017 -> 2018",
         expName: "Desenvolvedor Frontend",
       },
       {
         expImg: "/exp2.svg",
-        expDate: "2014 -> 2016",
+        expDate: "2019 -> 2020",
         expName: "Desenvolvedor Backend",
       },
       {
         expImg: "/exp3.svg",
-        expDate: "2014 ->  presente",
+        expDate: "2017 ->  presente",
         expName: "Desenvolvedor Freelancer Web ",
       },
       {
         expImg: "/exp4.svg",
-        expDate: "2016 -> presente",
+        expDate: "2020 -> presente",
         expName: "Desenvolvedor Fullstack ",
       },
     ],
