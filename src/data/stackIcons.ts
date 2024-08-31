@@ -1,0 +1,25 @@
+const stackIcons = [
+  { url: "/typescript.png", name: "Typescript" },
+  { url: "/reactjs.png", name: "React" },
+  { url: "/nextjs2.png", name: "NextJs" },
+  { url: "/angular17.png", name: "Angular" },
+  { url: "/figma.png", name: "Figma" },
+  { url: "/tailwindcss.png", name: "Tailwindcss" },
+  { url: "/sass.png", name: "Sass" },
+  { url: "/nodejs.png", name: "NodeJs" },
+  { url: "/nestjs.png", name: "NestJs" },
+  { url: "/swagger.png", name: "Swagger" },
+  { url: "/jest.png", name: "Jest" },
+  { url: "/git.png", name: "Git" },
+  { url: "/java.png", name: "Java" },
+  { url: "/spring.png", name: "Spring Boot" },
+  { url: "/docker.png", name: "Docker" },
+  { url: "/aws.png", name: "AWS" },
+  { url: "/cloudinary.png", name: "Cloudinary" },
+  { url: "/postgresql.png", name: "PostgreSQL" },
+  { url: "/mongodb.png", name: "MongoDb" },
+  { url: "/firebase.png", name: "Firebase" },
+  { url: "/redis.png", name: "Redis" },
+];
+
+export { stackIcons };
