@@ -1,5 +1,9 @@
+import { Header } from "@/src/components/Header";
+
 export default function Home() {
   return (
-    <main className="bg-zinc-950 w-full text-white overflow-x-hidden"></main>
+    <main className="bg-zinc-950 w-full text-white overflow-x-hidden">
+      <Header />
+    </main>
   );
 }
