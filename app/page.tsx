@@ -1,5 +1,7 @@
+import { Experience } from "@/src/components/Experience";
 import { Header } from "@/src/components/Header";
 import { Hero } from "@/src/components/Hero";
+import { Projects } from "@/src/components/Projects";
 import { Stack } from "@/src/components/Stack";
 
 export default function Home() {
@@ -8,6 +10,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Stack />
+      <Experience />
+      <Projects />
     </main>
   );
 }
