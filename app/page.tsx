@@ -1,3 +1,4 @@
+import { Blog } from "@/src/components/Blog";
 import { Experience } from "@/src/components/Experience";
 import { Header } from "@/src/components/Header";
 import { Hero } from "@/src/components/Hero";
@@ -12,6 +13,7 @@ export default function Home() {
       <Stack />
       <Experience />
       <Projects />
+      <Blog />
     </main>
   );
 }
