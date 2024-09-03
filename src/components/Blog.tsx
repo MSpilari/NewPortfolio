@@ -14,7 +14,10 @@ const Blog = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center">
+    <section
+      className="w-full flex flex-col items-center justify-center"
+      id="blog"
+    >
       <h1 className="text-yellow-500 text-3xl">Blog</h1>
       <div className="w-[90%] mx-auto flex flex-wrap items-center justify-center gap-x-4">
         {articles.map((article) => (
