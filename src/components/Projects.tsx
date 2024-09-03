@@ -6,7 +6,7 @@ const Projects = () => {
     <section className="w-full flex flex-col items-center justify-center">
       <h1 className="text-yellow-500 text-3xl">Projects</h1>
       <div className="w-[90%] flex items-center justify-center flex-wrap gap-x-3 mx-auto">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <ProjectCard
             title={project.title}
             description={project.description}
@@ -14,7 +14,7 @@ const Projects = () => {
             imageUrl={project.imageUrl}
             url={project.url}
             techs={project.techs}
-            key={project.url}
+            key={project.url + index}
           />
         ))}
       </div>
