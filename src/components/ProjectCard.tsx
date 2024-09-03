@@ -23,6 +23,7 @@ const ProjectCard = ({
         >
           {title}
         </CardItem>
+
         <CardItem
           as="p"
           translateZ="60"
@@ -30,6 +31,7 @@ const ProjectCard = ({
         >
           {description}
         </CardItem>
+
         <CardItem translateZ="100" className="w-full h-60 mt-4 relative">
           <Image
             src={imageUrl}
@@ -38,19 +40,22 @@ const ProjectCard = ({
             alt="thumbnail"
           />
         </CardItem>
-        <CardItem className="w-full flex mt-3 items-center justify-end gap-2">
-          {techs.map((tech) => (
-            <div className="w-8 h-8 flex items-center justify-center rounded-full overflow-hidden relative">
-              <Image
-                src={tech}
-                alt="tech Logo"
-                key={tech}
-                fill={true}
-                className="w-full h-full"
-              />
-            </div>
-          ))}
-        </CardItem>
+        {techs && (
+          <CardItem className="w-full flex mt-3 items-center justify-end gap-2">
+            {techs.map((tech) => (
+              <div className="w-8 h-8 flex items-center justify-center rounded-full overflow-hidden relative">
+                <Image
+                  src={tech}
+                  alt="tech Logo"
+                  key={tech}
+                  fill={true}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </CardItem>
+        )}
+
         <div className="flex justify-between items-center mt-3">
           <CardItem
             translateZ={20}
@@ -60,18 +65,21 @@ const ProjectCard = ({
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-xl text-xs font-normal border"
           >
-            Try now →
+            {githubRepo ? "Try now ->" : "Read article ->"}
           </CardItem>
-          <CardItem
-            translateZ={20}
-            as={Link}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={githubRepo}
-            className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
-          >
-            Code Repository
-          </CardItem>
+
+          {githubRepo && (
+            <CardItem
+              translateZ={20}
+              as={Link}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={githubRepo}
+              className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
+            >
+              Code Repository
+            </CardItem>
+          )}
         </div>
       </CardBody>
     </CardContainer>
