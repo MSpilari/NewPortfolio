@@ -1,5 +1,6 @@
 import { Blog } from "@/src/components/Blog";
 import { Experience } from "@/src/components/Experience";
+import { Footer } from "@/src/components/Footer";
 import { Header } from "@/src/components/Header";
 import { Hero } from "@/src/components/Hero";
 import { Projects } from "@/src/components/Projects";
@@ -14,6 +15,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Blog />
+      <Footer />
     </main>
   );
 }
