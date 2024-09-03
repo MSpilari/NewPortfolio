@@ -2,9 +2,9 @@ type ProjectCardDto = {
   title: string;
   description: string;
   imageUrl: string;
-  githubRepo: string;
+  githubRepo?: string;
   url: string;
-  techs: string[];
+  techs?: string[];
 };
 
 export type { ProjectCardDto };
