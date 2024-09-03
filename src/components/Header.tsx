@@ -1,9 +1,9 @@
-import Link from "next/link";
 import Logo from "@/public/LogoMobile.png";
 import Image from "next/image";
-import { FaLinkedin, FaGithub, FaDev } from "react-icons/fa6";
+import Link from "next/link";
 import { FaTools } from "react-icons/fa";
-import { MdWork } from "react-icons/md";
+import { FaDev } from "react-icons/fa6";
+import { MdWork, MdWorkHistory } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -30,28 +30,18 @@ const Header = () => {
           <MdWork />
         </Link>
 
+        <Link href="#experience" className="hidden md:block">
+          Experience
+        </Link>
+        <Link href="#experience" className="md:hidden">
+          <MdWorkHistory />
+        </Link>
+
         <Link href="#blog" className="hidden md:block">
           Blog
         </Link>
         <Link href="#blog" className="md:hidden">
           <FaDev />
-        </Link>
-
-        <Link
-          href="https://github.com/MSpilari"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </Link>
-
-        <Link
-          className="text-blue-800"
-          href="https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
         </Link>
       </nav>
     </header>
