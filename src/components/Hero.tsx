@@ -1,6 +1,8 @@
+import Link from "next/link";
 import { words } from "../data/words";
 import { StarsBackground } from "../ui/StarsBackground";
 import { TypewriterEffect } from "../ui/TypewriterEffect";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -12,7 +14,25 @@ const Hero = () => {
           className="text-5xl"
           words={words}
         />
-        <p className="mt-1">Fullstack Developer & Software Engineer</p>
+        <p className="mt-1">Fullstack Developer</p>
+        <div className="flex items-center justify-center gap-3 text-4xl z-50 mt-1 lg:text-5xl">
+          <Link
+            className="flex items-center justify-center"
+            href="https://github.com/MSpilari"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </Link>
+          <Link
+            className="flex items-center justify-center"
+            href="https://www.linkedin.com/in/matheus-bernardes-spilari-2b8068188/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </Link>
+        </div>
       </div>
     </section>
   );
