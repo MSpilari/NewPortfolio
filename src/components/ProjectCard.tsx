@@ -43,7 +43,10 @@ const ProjectCard = ({
         {techs && (
           <CardItem className="w-full flex mt-3 items-center justify-end gap-2">
             {techs.map((tech) => (
-              <div className="w-8 h-8 flex items-center justify-center rounded-full overflow-hidden relative">
+              <div
+                key={tech}
+                className="w-8 h-8 flex items-center justify-center rounded-full overflow-hidden relative"
+              >
                 <Image
                   src={tech}
                   alt="tech Logo"
