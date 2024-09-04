@@ -1,25 +1,31 @@
-"use client";
+import { Footer } from "@/src/components/Footer";
+import { Header } from "@/src/components/Header";
+import { Hero } from "@/src/components/Hero";
+import dynamic from "next/dynamic";
 
-import { useMediaQuery } from "react-responsive";
+const Blog = dynamic(() =>
+  import("@/src/components/Blog").then((mod) => mod.Blog)
+);
+const Experience = dynamic(() =>
+  import("@/src/components/Experience").then((mod) => mod.Experience)
+);
+const Projects = dynamic(() =>
+  import("@/src/components/Projects").then((mod) => mod.Projects)
+);
+const Stack = dynamic(() =>
+  import("@/src/components/Stack").then((mod) => mod.Stack)
+);
 
-import AnimationDesktopFile from "@assets/indexAnimationDesktop.json";
-import AnimationMobileFile from "@assets/indexAnimationMobile.json";
-
-import { Animation } from "@components/01_Atoms/Animation";
-import { Greet } from "@components/03_Organisms/Greet";
-
-const HomePage = () => {
-  const isMobile = useMediaQuery({ query: "(max-width:768px)" });
-
+export default function Home() {
   return (
-    <div className="flex flex-col h-[calc(100%-128px)] relative lg:flex-row lg:w-[calc(100%-80px)] lg:h-full ">
-      <Animation
-        animationFile={isMobile ? AnimationMobileFile : AnimationDesktopFile}
-        className="w-full h-full"
-      />
-      <Greet />
-    </div>
+    <main className="bg-zinc-950 w-full text-white overflow-x-hidden">
+      <Header />
+      <Hero />
+      <Stack />
+      <Experience />
+      <Projects />
+      <Blog />
+      <Footer />
+    </main>
   );
-};
-
-export default HomePage;
+}

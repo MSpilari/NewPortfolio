@@ -26,7 +26,4 @@ This project also makes use of **GITHUB ACTIONS** to run some automated tests wh
 - [ReactJs](https://pt-br.reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [React Icons](https://react-icons.github.io/react-icons/)
-- [React Lottie](https://www.npmjs.com/package/react-lottie)
 - [Tailwind Css](https://tailwindcss.com/)
-- [Firebase](http://firebase.google.com/)
-- [Jest](https://jestjs.io/pt-BR/)
