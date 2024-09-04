@@ -18,7 +18,9 @@ const Blog = () => {
       className="w-full flex flex-col items-center justify-center"
       id="blog"
     >
-      <h1 className="text-yellow-500 text-3xl">Blog</h1>
+      <h1 className="text-yellow-500 text-4xl underline font-extrabold">
+        Artigos
+      </h1>
       <div className="w-[90%] mx-auto flex flex-wrap items-center justify-center gap-x-4">
         {articles.map((article) => (
           <ProjectCard

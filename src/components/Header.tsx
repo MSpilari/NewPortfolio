@@ -17,28 +17,28 @@ const Header = () => {
 
       <nav className="flex gap-4 items-center text-xl lg:text-2xl z-50">
         <Link href="#stack" className="hidden md:block">
-          Stack
+          Ferramentas
         </Link>
         <Link href="#stack" className="md:hidden">
           <FaTools />
         </Link>
 
         <Link href="#projects" className="hidden md:block">
-          Projects
+          Projetos
         </Link>
         <Link href="#projects" className="md:hidden">
           <MdWork />
         </Link>
 
         <Link href="#experience" className="hidden md:block">
-          Experience
+          Experiência
         </Link>
         <Link href="#experience" className="md:hidden">
           <MdWorkHistory />
         </Link>
 
         <Link href="#blog" className="hidden md:block">
-          Blog
+          Artigos
         </Link>
         <Link href="#blog" className="md:hidden">
           <FaDev />

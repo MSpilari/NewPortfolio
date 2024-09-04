@@ -7,7 +7,9 @@ const Experience = () => {
       className="w-full min-h-fit flex flex-col items-center justify-center overflow-hidden"
       id="experience"
     >
-      <h1 className="text-yellow-500 text-3xl">Experience</h1>
+      <h1 className="text-yellow-500 text-4xl underline font-extrabold">
+        Experiência
+      </h1>
       <Timeline data={data} />
     </section>
   );
