@@ -27,7 +27,7 @@ const ProjectCard = ({
         <CardItem
           as="p"
           translateZ="60"
-          className="text-sm max-w-sm mt-2 line-clamp-2"
+          className="text-sm max-w-sm mt-2 line-clamp-1"
         >
           {description}
         </CardItem>
@@ -41,7 +41,10 @@ const ProjectCard = ({
           />
         </CardItem>
         {techs && (
-          <CardItem className="w-full flex mt-3 items-center justify-end gap-2">
+          <CardItem
+            translateZ="60"
+            className="w-full flex mt-3 items-center justify-end gap-2"
+          >
             {techs.map((tech) => (
               <div
                 key={tech}
