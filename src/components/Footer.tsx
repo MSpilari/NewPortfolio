@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full flex items-center justify-center gap-1 text-base sm:text-lg mb-2">
-      <p>Built from scratch by ® MSpilari. - {date.getFullYear()}</p>
+      <p>Criado por ® MSpilari. - {date.getFullYear()}</p>
       <div className="flex items-center justify-center gap-2">
         <Link
           href="https://github.com/MSpilari"

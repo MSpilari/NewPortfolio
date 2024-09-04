@@ -71,7 +71,7 @@ const ProjectCard = ({
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-xl text-xs font-normal border"
           >
-            {githubRepo ? "Try now ->" : "Read article ->"}
+            {githubRepo ? "Acesse ->" : "Leia o artigo ->"}
           </CardItem>
 
           {githubRepo && (
@@ -83,7 +83,7 @@ const ProjectCard = ({
               href={githubRepo}
               className="px-4 py-2 rounded-xl bg-white text-black text-xs font-bold"
             >
-              Code Repository
+              Repositório do Código
             </CardItem>
           )}
         </div>
