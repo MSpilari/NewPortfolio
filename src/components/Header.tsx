@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaTools } from "react-icons/fa";
 import { FaDev } from "react-icons/fa6";
-import { MdWork, MdWorkHistory } from "react-icons/md";
+import { MdWork } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -28,13 +28,6 @@ const Header = () => {
         </Link>
         <Link href="#projects" className="md:hidden">
           <MdWork />
-        </Link>
-
-        <Link href="#experience" className="hidden md:block">
-          Experiência
-        </Link>
-        <Link href="#experience" className="md:hidden">
-          <MdWorkHistory />
         </Link>
 
         <Link href="#blog" className="hidden md:block">
