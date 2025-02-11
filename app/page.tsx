@@ -6,9 +6,6 @@ import dynamic from "next/dynamic";
 const Blog = dynamic(() =>
   import("@/src/components/Blog").then((mod) => mod.Blog)
 );
-const Experience = dynamic(() =>
-  import("@/src/components/Experience").then((mod) => mod.Experience)
-);
 const Projects = dynamic(() =>
   import("@/src/components/Projects").then((mod) => mod.Projects)
 );
@@ -22,7 +19,6 @@ export default function Home() {
       <Header />
       <Hero />
       <Stack />
-      <Experience />
       <Projects />
       <Blog />
       <Footer />
