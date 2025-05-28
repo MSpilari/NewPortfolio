@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: "Rosemeire Imóveis - Corretora",
+    description: "Site para uma corretora de imóveis.",
+    imageUrl: "/roseImoveis.png",
+    githubRepo: "https://github.com/MSpilari/rose_site",
+    url: "https://rose-site-lilac.vercel.app/",
+    techs: ["/reactjs.png", "/tailwindcss.png", "/nextjs2.png"],
+  },
+  {
     title: "Sistema emissor de Voucher",
     description:
       "Um sistema de geração de vouchers para uma hamburgueria, utilizando Spring Boot, Redis e Thymeleaf",
@@ -13,6 +21,14 @@ const projects = [
       "/docker.png",
       "/swagger.png",
     ],
+  },
+  {
+    title: "Barber Shop - Barbearia",
+    description: "Site para uma barbearia.",
+    imageUrl: "/barberShop.png",
+    githubRepo: "https://github.com/MSpilari/barber-shop",
+    url: "https://barber-shop.vercel.app/",
+    techs: ["/reactjs.png", "/tailwindcss.png", "/nextjs2.png"],
   },
   {
     title: "Sistema de login(JWT) com recuperação de senha por email",
